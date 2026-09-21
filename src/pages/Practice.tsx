@@ -99,6 +99,14 @@ export default function Practice() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  /** 加载超过 15 秒仍未完成 → 显示重试提示（网络不稳定时不至于无限转圈） */
+  const [slowStart, setSlowStart] = useState(false);
+  useEffect(() => {
+    if (phase !== "starting") return;
+    const t = setTimeout(() => setSlowStart(true), 15000);
+    return () => clearTimeout(t);
+  }, [phase]);
+
   const item: Item | undefined = queue[pos];
   const doneOriginal = useMemo(
     () => queue.slice(0, pos).filter((q) => !q.isRepeat).length,
@@ -193,10 +201,24 @@ export default function Practice() {
   };
 
   if (phase === "starting") {
+    const failed = startMut.isError || slowStart;
     return (
       <Layout>
-        <div className="py-24 text-center text-muted-foreground">
-          Готовим ваши 30 заданий…
+        <div className="py-24 text-center space-y-4">
+          {failed ? (
+            <>
+              <p className="text-4xl">📡</p>
+              <p className="font-medium">Не удалось загрузить задания</p>
+              <p className="text-sm text-muted-foreground">
+                Проверьте подключение к интернету и попробуйте ещё раз.
+              </p>
+              <Button variant="outline" onClick={() => window.location.reload()}>
+                Попробовать ещё раз
+              </Button>
+            </>
+          ) : (
+            <div className="text-muted-foreground">Готовим ваши 30 заданий…</div>
+          )}
         </div>
       </Layout>
     );
