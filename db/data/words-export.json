@@ -1,0 +1,2702 @@
+[
+  {
+    "hanzi": "爱",
+    "pinyin": "ài",
+    "russian": "любить",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "飞机",
+    "pinyin": "fēijī",
+    "russian": "самолёт",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "里",
+    "pinyin": "lǐ",
+    "russian": "в, внутри (послелог)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "八",
+    "pinyin": "bā",
+    "russian": "восемь",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "分钟",
+    "pinyin": "fēnzhōng",
+    "russian": "минута",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "六",
+    "pinyin": "liù",
+    "russian": "шесть",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "爸爸",
+    "pinyin": "bàba",
+    "russian": "папа",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "高兴",
+    "pinyin": "gāoxìng",
+    "russian": "радостный, довольный",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "妈妈",
+    "pinyin": "māma",
+    "russian": "мама",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "杯子",
+    "pinyin": "bēizi",
+    "russian": "стакан, чашка",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "个",
+    "pinyin": "gè",
+    "russian": "(универсальное счётное слово)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "吗",
+    "pinyin": "ma",
+    "russian": "(вопросительная частица)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "北京",
+    "pinyin": "Běijīng",
+    "russian": "Пекин",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "工作",
+    "pinyin": "gōngzuò",
+    "russian": "работать; работа",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "买",
+    "pinyin": "mǎi",
+    "russian": "покупать",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "本",
+    "pinyin": "běn",
+    "russian": "(счётное слово для книг)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "狗",
+    "pinyin": "gǒu",
+    "russian": "собака",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "猫",
+    "pinyin": "māo",
+    "russian": "кошка",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "不",
+    "pinyin": "bù",
+    "russian": "не, нет",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "汉语",
+    "pinyin": "Hànyǔ",
+    "russian": "китайский язык",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "没关系",
+    "pinyin": "méi guānxi",
+    "russian": "ничего страшного, не за что",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "不客气",
+    "pinyin": "bú kèqi",
+    "russian": "не стоит благодарности, не за что",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "好",
+    "pinyin": "hǎo",
+    "russian": "хороший, хорошо",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "没有",
+    "pinyin": "méiyǒu",
+    "russian": "не иметь, нет; не (о прошедшем)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "菜",
+    "pinyin": "cài",
+    "russian": "блюдо; овощи",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "号",
+    "pinyin": "hào",
+    "russian": "число (даты), номер",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "米饭",
+    "pinyin": "mǐfàn",
+    "russian": "варёный рис",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "茶",
+    "pinyin": "chá",
+    "russian": "чай",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "喝",
+    "pinyin": "hē",
+    "russian": "пить",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "名字",
+    "pinyin": "míngzi",
+    "russian": "имя",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "吃",
+    "pinyin": "chī",
+    "russian": "есть, кушать",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "和",
+    "pinyin": "hé",
+    "russian": "и, с",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "明天",
+    "pinyin": "míngtiān",
+    "russian": "завтра",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "出租车",
+    "pinyin": "chūzūchē",
+    "russian": "такси",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "很",
+    "pinyin": "hěn",
+    "russian": "очень",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "哪",
+    "pinyin": "nǎ",
+    "russian": "какой, который",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "打电话",
+    "pinyin": "dǎ diànhuà",
+    "russian": "звонить по телефону",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "后面",
+    "pinyin": "hòumiàn",
+    "russian": "сзади, позади",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "哪儿",
+    "pinyin": "nǎr",
+    "russian": "где, куда",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "大",
+    "pinyin": "dà",
+    "russian": "большой",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "回",
+    "pinyin": "huí",
+    "russian": "возвращаться",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "那",
+    "pinyin": "nà",
+    "russian": "тот, то",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "的",
+    "pinyin": "de",
+    "russian": "(структурная частица)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "会",
+    "pinyin": "huì",
+    "russian": "уметь, мочь; будет",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "呢",
+    "pinyin": "ne",
+    "russian": "(частица: а...?; продолжение действия)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "点",
+    "pinyin": "diǎn",
+    "russian": "точка; час (времени); немного",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "几",
+    "pinyin": "jǐ",
+    "russian": "сколько (до 10); несколько",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "能",
+    "pinyin": "néng",
+    "russian": "мочь, можно",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "电脑",
+    "pinyin": "diànnǎo",
+    "russian": "компьютер",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "家",
+    "pinyin": "jiā",
+    "russian": "дом, семья",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "你",
+    "pinyin": "nǐ",
+    "russian": "ты, вы",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "电视",
+    "pinyin": "diànshì",
+    "russian": "телевизор; телевидение",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "叫",
+    "pinyin": "jiào",
+    "russian": "звать, называться",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "年",
+    "pinyin": "nián",
+    "russian": "год",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "电影",
+    "pinyin": "diànyǐng",
+    "russian": "фильм, кино",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "今天",
+    "pinyin": "jīntiān",
+    "russian": "сегодня",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "女儿",
+    "pinyin": "nǚ'ér",
+    "russian": "дочь",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "东西",
+    "pinyin": "dōngxi",
+    "russian": "вещь, предмет",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "九",
+    "pinyin": "jiǔ",
+    "russian": "девять",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "朋友",
+    "pinyin": "péngyou",
+    "russian": "друг, друзья",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "都",
+    "pinyin": "dōu",
+    "russian": "все, оба",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "开",
+    "pinyin": "kāi",
+    "russian": "открывать(ся); вести (машину)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "漂亮",
+    "pinyin": "piàoliang",
+    "russian": "красивый",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "读",
+    "pinyin": "dú",
+    "russian": "читать (вслух); учиться",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "看",
+    "pinyin": "kàn",
+    "russian": "смотреть, читать",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "苹果",
+    "pinyin": "píngguǒ",
+    "russian": "яблоко",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "对不起",
+    "pinyin": "duìbuqǐ",
+    "russian": "извините, простите",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "看见",
+    "pinyin": "kànjiàn",
+    "russian": "увидеть, видеть",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "七",
+    "pinyin": "qī",
+    "russian": "семь",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "多",
+    "pinyin": "duō",
+    "russian": "много; насколько",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "块",
+    "pinyin": "kuài",
+    "russian": "юань; кусок",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "前面",
+    "pinyin": "qiánmiàn",
+    "russian": "спереди, впереди",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "多少",
+    "pinyin": "duōshao",
+    "russian": "сколько",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "来",
+    "pinyin": "lái",
+    "russian": "приходить, приезжать",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "钱",
+    "pinyin": "qián",
+    "russian": "деньги",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "儿子",
+    "pinyin": "érzi",
+    "russian": "сын",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "老师",
+    "pinyin": "lǎoshī",
+    "russian": "учитель, преподаватель",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "请",
+    "pinyin": "qǐng",
+    "russian": "просить; приглашать; пожалуйста",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "二",
+    "pinyin": "èr",
+    "russian": "два",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "了",
+    "pinyin": "le",
+    "russian": "(видовая/модальная частица)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "去",
+    "pinyin": "qù",
+    "russian": "идти, ехать (туда)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "饭店",
+    "pinyin": "fàndiàn",
+    "russian": "ресторан; отель",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "冷",
+    "pinyin": "lěng",
+    "russian": "холодный",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "热",
+    "pinyin": "rè",
+    "russian": "горячий, жаркий",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "人",
+    "pinyin": "rén",
+    "russian": "человек, люди",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "天气",
+    "pinyin": "tiānqì",
+    "russian": "погода",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "学校",
+    "pinyin": "xuéxiào",
+    "russian": "школа",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "认识",
+    "pinyin": "rènshi",
+    "russian": "знать, быть знакомым; познакомиться",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "听",
+    "pinyin": "tīng",
+    "russian": "слушать",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "一",
+    "pinyin": "yī",
+    "russian": "один",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "三",
+    "pinyin": "sān",
+    "russian": "три",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "同学",
+    "pinyin": "tóngxué",
+    "russian": "одноклассник, однокурсник",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "一点儿",
+    "pinyin": "yìdiǎnr",
+    "russian": "немного, чуть-чуть",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "商店",
+    "pinyin": "shāngdiàn",
+    "russian": "магазин",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "喂",
+    "pinyin": "wèi",
+    "russian": "алло; эй",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "衣服",
+    "pinyin": "yīfu",
+    "russian": "одежда",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "上",
+    "pinyin": "shàng",
+    "russian": "наверху; подниматься; идти (на...)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "我",
+    "pinyin": "wǒ",
+    "russian": "я",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "医生",
+    "pinyin": "yīshēng",
+    "russian": "врач",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "上午",
+    "pinyin": "shàngwǔ",
+    "russian": "утро (до полудня)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "我们",
+    "pinyin": "wǒmen",
+    "russian": "мы",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "医院",
+    "pinyin": "yīyuàn",
+    "russian": "больница",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "少",
+    "pinyin": "shǎo",
+    "russian": "мало, немного",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "五",
+    "pinyin": "wǔ",
+    "russian": "пять",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "椅子",
+    "pinyin": "yǐzi",
+    "russian": "стул",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "谁",
+    "pinyin": "shéi",
+    "russian": "кто (также читается shuí)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "喜欢",
+    "pinyin": "xǐhuan",
+    "russian": "нравиться, любить",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "有",
+    "pinyin": "yǒu",
+    "russian": "иметь, быть (есть)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "什么",
+    "pinyin": "shénme",
+    "russian": "что, какой",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "下",
+    "pinyin": "xià",
+    "russian": "внизу; спускаться; (о дожде) идти",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "月",
+    "pinyin": "yuè",
+    "russian": "месяц; луна",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "十",
+    "pinyin": "shí",
+    "russian": "десять",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "下午",
+    "pinyin": "xiàwǔ",
+    "russian": "время после полудня",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "再见",
+    "pinyin": "zàijiàn",
+    "russian": "до свидания",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "时候",
+    "pinyin": "shíhou",
+    "russian": "время, момент",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "下雨",
+    "pinyin": "xià yǔ",
+    "russian": "идёт дождь",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "在",
+    "pinyin": "zài",
+    "russian": "находиться; в, на",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "是",
+    "pinyin": "shì",
+    "russian": "быть, являться (глагол-связка)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "先生",
+    "pinyin": "xiānsheng",
+    "russian": "господин, мистер; муж",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "怎么",
+    "pinyin": "zěnme",
+    "russian": "как, каким образом",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "书",
+    "pinyin": "shū",
+    "russian": "книга",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "现在",
+    "pinyin": "xiànzài",
+    "russian": "сейчас, теперь",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "怎么样",
+    "pinyin": "zěnmeyàng",
+    "russian": "как, каково",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "水",
+    "pinyin": "shuǐ",
+    "russian": "вода",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "想",
+    "pinyin": "xiǎng",
+    "russian": "думать; хотеть; скучать",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "这",
+    "pinyin": "zhè",
+    "russian": "это, этот",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "水果",
+    "pinyin": "shuǐguǒ",
+    "russian": "фрукты",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "小",
+    "pinyin": "xiǎo",
+    "russian": "маленький",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "中国",
+    "pinyin": "Zhōngguó",
+    "russian": "Китай",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "睡觉",
+    "pinyin": "shuìjiào",
+    "russian": "спать, ложиться спать",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "小姐",
+    "pinyin": "xiǎojiě",
+    "russian": "барышня, мисс",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "中午",
+    "pinyin": "zhōngwǔ",
+    "russian": "полдень",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "说",
+    "pinyin": "shuō",
+    "russian": "говорить, сказать",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "些",
+    "pinyin": "xiē",
+    "russian": "несколько, некоторые",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "住",
+    "pinyin": "zhù",
+    "russian": "жить, проживать; останавливаться",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "四",
+    "pinyin": "sì",
+    "russian": "четыре",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "写",
+    "pinyin": "xiě",
+    "russian": "писать (иероглифы)",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "桌子",
+    "pinyin": "zhuōzi",
+    "russian": "стол",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "岁",
+    "pinyin": "suì",
+    "russian": "год, лет (о возрасте)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "谢谢",
+    "pinyin": "xièxie",
+    "russian": "спасибо",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "字",
+    "pinyin": "zì",
+    "russian": "иероглиф",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "他",
+    "pinyin": "tā",
+    "russian": "он",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "星期",
+    "pinyin": "xīngqī",
+    "russian": "неделя",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "昨天",
+    "pinyin": "zuótiān",
+    "russian": "вчера",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "她",
+    "pinyin": "tā",
+    "russian": "она",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "学生",
+    "pinyin": "xuésheng",
+    "russian": "ученик, студент",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "坐",
+    "pinyin": "zuò",
+    "russian": "сидеть; садиться; ехать (на транспорте)",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "太",
+    "pinyin": "tài",
+    "russian": "слишком",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "学习",
+    "pinyin": "xuéxí",
+    "russian": "учиться, изучать; учёба",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "做",
+    "pinyin": "zuò",
+    "russian": "делать, заниматься",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "吧",
+    "pinyin": "ba",
+    "russian": "(модальная частица: предположение, совет)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "高",
+    "pinyin": "gāo",
+    "russian": "высокий",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "可以",
+    "pinyin": "kěyǐ",
+    "russian": "можно, мочь",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "白",
+    "pinyin": "bái",
+    "russian": "белый",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "告诉",
+    "pinyin": "gàosu",
+    "russian": "сказать, сообщить, рассказать",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "课",
+    "pinyin": "kè",
+    "russian": "урок, занятие; курс",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "百",
+    "pinyin": "bǎi",
+    "russian": "сто",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "哥哥",
+    "pinyin": "gēge",
+    "russian": "старший брат",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "快",
+    "pinyin": "kuài",
+    "russian": "быстрый, быстро; скоро",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "帮助",
+    "pinyin": "bāngzhù",
+    "russian": "помогать; помощь",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "给",
+    "pinyin": "gěi",
+    "russian": "давать; для, (к)ому",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "快乐",
+    "pinyin": "kuàilè",
+    "russian": "счастливый, радостный",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "报纸",
+    "pinyin": "bàozhǐ",
+    "russian": "газета",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "公共汽车",
+    "pinyin": "gōnggòng qìchē",
+    "russian": "автобус",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "累",
+    "pinyin": "lèi",
+    "russian": "уставший",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "比",
+    "pinyin": "bǐ",
+    "russian": "чем (при сравнении); сравнивать",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "公司",
+    "pinyin": "gōngsī",
+    "russian": "компания, фирма",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "离",
+    "pinyin": "lí",
+    "russian": "от, на расстоянии от",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "别",
+    "pinyin": "bié",
+    "russian": "не надо, не (запрет)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "贵",
+    "pinyin": "guì",
+    "russian": "дорогой",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "两",
+    "pinyin": "liǎng",
+    "russian": "два, пара, оба",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "宾馆",
+    "pinyin": "bīnguǎn",
+    "russian": "гостиница",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "过",
+    "pinyin": "guo",
+    "russian": "(видовая частица опыта)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "零",
+    "pinyin": "líng",
+    "russian": "ноль",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "长",
+    "pinyin": "cháng",
+    "russian": "длинный",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "还",
+    "pinyin": "hái",
+    "russian": "ещё, тоже, всё ещё",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "路",
+    "pinyin": "lù",
+    "russian": "дорога, путь",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "唱歌",
+    "pinyin": "chàng gē",
+    "russian": "петь (песни)",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "孩子",
+    "pinyin": "háizi",
+    "russian": "ребёнок, дети",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "旅游",
+    "pinyin": "lǚyóu",
+    "russian": "путешествовать; туризм",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "出",
+    "pinyin": "chū",
+    "russian": "выходить",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "好吃",
+    "pinyin": "hǎochī",
+    "russian": "вкусный",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "卖",
+    "pinyin": "mài",
+    "russian": "продавать",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "穿",
+    "pinyin": "chuān",
+    "russian": "надевать, носить (одежду)",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "黑",
+    "pinyin": "hēi",
+    "russian": "чёрный",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "慢",
+    "pinyin": "màn",
+    "russian": "медленный",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "次",
+    "pinyin": "cì",
+    "russian": "раз",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "红",
+    "pinyin": "hóng",
+    "russian": "красный",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "忙",
+    "pinyin": "máng",
+    "russian": "занятой, хлопотливый",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "从",
+    "pinyin": "cóng",
+    "russian": "с, от, из",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "火车站",
+    "pinyin": "huǒchēzhàn",
+    "russian": "железнодорожный вокзал",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "每",
+    "pinyin": "měi",
+    "russian": "каждый",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "错",
+    "pinyin": "cuò",
+    "russian": "ошибочный, неверный; ошибка",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "机场",
+    "pinyin": "jīchǎng",
+    "russian": "аэропорт",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "妹妹",
+    "pinyin": "mèimei",
+    "russian": "младшая сестра",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "打篮球",
+    "pinyin": "dǎ lánqiú",
+    "russian": "играть в баскетбол",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "鸡蛋",
+    "pinyin": "jīdàn",
+    "russian": "(куриное) яйцо",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "门",
+    "pinyin": "mén",
+    "russian": "дверь",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "大家",
+    "pinyin": "dàjiā",
+    "russian": "все, всяк",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "件",
+    "pinyin": "jiàn",
+    "russian": "(счётное слово для одежды, дел)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "面条儿",
+    "pinyin": "miàntiáor",
+    "russian": "лапша",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "到",
+    "pinyin": "dào",
+    "russian": "прибывать, достигать; до",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "教室",
+    "pinyin": "jiàoshì",
+    "russian": "класс, аудитория",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "男",
+    "pinyin": "nán",
+    "russian": "мужской; мужчина",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "得",
+    "pinyin": "de",
+    "russian": "(структурная частица степени)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "姐姐",
+    "pinyin": "jiějie",
+    "russian": "старшая сестра",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "您",
+    "pinyin": "nín",
+    "russian": "Вы (вежливое)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "等",
+    "pinyin": "děng",
+    "russian": "ждать",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "介绍",
+    "pinyin": "jièshào",
+    "russian": "представлять, знакомить",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "牛奶",
+    "pinyin": "niúnǎi",
+    "russian": "молоко",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "弟弟",
+    "pinyin": "dìdi",
+    "russian": "младший брат",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "进",
+    "pinyin": "jìn",
+    "russian": "входить",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "女",
+    "pinyin": "nǚ",
+    "russian": "женский; женщина",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "第一",
+    "pinyin": "dì-yī",
+    "russian": "первый",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "近",
+    "pinyin": "jìn",
+    "russian": "близкий",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "旁边",
+    "pinyin": "pángbiān",
+    "russian": "рядом, сбоку",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "懂",
+    "pinyin": "dǒng",
+    "russian": "понимать",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "就",
+    "pinyin": "jiù",
+    "russian": "как раз, только, сразу",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "跑步",
+    "pinyin": "pǎobù",
+    "russian": "бегать, бег",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "对",
+    "pinyin": "duì",
+    "russian": "правильный, верный",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "觉得",
+    "pinyin": "juéde",
+    "russian": "чувствовать, считать, полагать",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "便宜",
+    "pinyin": "piányi",
+    "russian": "дешёвый",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "对",
+    "pinyin": "duì",
+    "russian": "к, по отношению к",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "咖啡",
+    "pinyin": "kāfēi",
+    "russian": "кофе",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "票",
+    "pinyin": "piào",
+    "russian": "билет",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "房间",
+    "pinyin": "fángjiān",
+    "russian": "комната",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "开始",
+    "pinyin": "kāishǐ",
+    "russian": "начинать(ся); начало",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "妻子",
+    "pinyin": "qīzi",
+    "russian": "жена",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "非常",
+    "pinyin": "fēicháng",
+    "russian": "очень, чрезвычайно",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "考试",
+    "pinyin": "kǎoshì",
+    "russian": "сдавать экзамен; экзамен",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "起床",
+    "pinyin": "qǐchuáng",
+    "russian": "вставать (с кровати)",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "服务员",
+    "pinyin": "fúwùyuán",
+    "russian": "официант, обслуживающий персонал",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "可能",
+    "pinyin": "kěnéng",
+    "russian": "возможно, может быть",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "千",
+    "pinyin": "qiān",
+    "russian": "тысяча",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "铅笔",
+    "pinyin": "qiānbǐ",
+    "russian": "карандаш",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "玩",
+    "pinyin": "wán",
+    "russian": "играть, развлекаться",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "一下",
+    "pinyin": "yīxià",
+    "russian": "(кратковременность действия)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "晴",
+    "pinyin": "qíng",
+    "russian": "ясный, солнечный (о погоде)",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "晚上",
+    "pinyin": "wǎnshang",
+    "russian": "вечер",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "已经",
+    "pinyin": "yǐjing",
+    "russian": "уже",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "去年",
+    "pinyin": "qùnián",
+    "russian": "прошлый год",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "往",
+    "pinyin": "wǎng",
+    "russian": "в сторону, по направлению к",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "意思",
+    "pinyin": "yìsi",
+    "russian": "значение, смысл",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "让",
+    "pinyin": "ràng",
+    "russian": "позволять, просить, заставлять",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "为什么",
+    "pinyin": "wèishénme",
+    "russian": "почему, зачем",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "因为……所以……",
+    "pinyin": "yīnwèi…… suǒyǐ……",
+    "russian": "потому что... поэтому...",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "日",
+    "pinyin": "rì",
+    "russian": "день; солнце",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "问",
+    "pinyin": "wèn",
+    "russian": "спрашивать",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "阴",
+    "pinyin": "yīn",
+    "russian": "пасмурный",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "上班",
+    "pinyin": "shàngbān",
+    "russian": "идти на работу, работать",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "问题",
+    "pinyin": "wèntí",
+    "russian": "вопрос, проблема",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "游泳",
+    "pinyin": "yóuyǒng",
+    "russian": "плавать",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "身体",
+    "pinyin": "shēntǐ",
+    "russian": "тело; здоровье",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "西瓜",
+    "pinyin": "xīguā",
+    "russian": "арбуз",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "右边",
+    "pinyin": "yòubian",
+    "russian": "справа, правая сторона",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "生病",
+    "pinyin": "shēngbìng",
+    "russian": "заболеть, болеть",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "希望",
+    "pinyin": "xīwàng",
+    "russian": "надеяться; надежда",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "鱼",
+    "pinyin": "yú",
+    "russian": "рыба",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "生日",
+    "pinyin": "shēngrì",
+    "russian": "день рождения",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "洗",
+    "pinyin": "xǐ",
+    "russian": "мыть, стирать",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "远",
+    "pinyin": "yuǎn",
+    "russian": "далёкий",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "时间",
+    "pinyin": "shíjiān",
+    "russian": "время",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "小时",
+    "pinyin": "xiǎoshí",
+    "russian": "час",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "运动",
+    "pinyin": "yùndòng",
+    "russian": "заниматься спортом; спорт",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "事情",
+    "pinyin": "shìqing",
+    "russian": "дело, событие",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "笑",
+    "pinyin": "xiào",
+    "russian": "смеяться, улыбаться",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "再",
+    "pinyin": "zài",
+    "russian": "снова, ещё раз",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "手表",
+    "pinyin": "shǒubiǎo",
+    "russian": "наручные часы",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "新",
+    "pinyin": "xīn",
+    "russian": "новый",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "早上",
+    "pinyin": "zǎoshang",
+    "russian": "утро (раннее)",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "手机",
+    "pinyin": "shǒujī",
+    "russian": "мобильный телефон",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "姓",
+    "pinyin": "xìng",
+    "russian": "носить фамилию; фамилия",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "丈夫",
+    "pinyin": "zhàngfu",
+    "russian": "муж",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "说话",
+    "pinyin": "shuōhuà",
+    "russian": "говорить, разговаривать",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "休息",
+    "pinyin": "xiūxi",
+    "russian": "отдыхать; отдых",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "找",
+    "pinyin": "zhǎo",
+    "russian": "искать",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "送",
+    "pinyin": "sòng",
+    "russian": "дарить; провожать; доставлять",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "雪",
+    "pinyin": "xuě",
+    "russian": "снег",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "着",
+    "pinyin": "zhe",
+    "russian": "(видовая частица длительности)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "虽然……但是……",
+    "pinyin": "suīrán…… dànshì……",
+    "russian": "хотя... но...",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "颜色",
+    "pinyin": "yánsè",
+    "russian": "цвет",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "真",
+    "pinyin": "zhēn",
+    "russian": "настоящий; действительно",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "它",
+    "pinyin": "tā",
+    "russian": "оно",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "眼睛",
+    "pinyin": "yǎnjing",
+    "russian": "глаз, глаза",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "正在",
+    "pinyin": "zhèngzài",
+    "russian": "(прямо) сейчас (длительное действие)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "踢足球",
+    "pinyin": "tī zúqiú",
+    "russian": "играть в футбол",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "羊肉",
+    "pinyin": "yángròu",
+    "russian": "баранина",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "知道",
+    "pinyin": "zhīdào",
+    "russian": "знать",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "题",
+    "pinyin": "tí",
+    "russian": "задача, вопрос (в тесте)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "药",
+    "pinyin": "yào",
+    "russian": "лекарство",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "准备",
+    "pinyin": "zhǔnbèi",
+    "russian": "готовиться, подготовить",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "跳舞",
+    "pinyin": "tiàowǔ",
+    "russian": "танцевать",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "要",
+    "pinyin": "yào",
+    "russian": "хотеть; нужно; собираться",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "走",
+    "pinyin": "zǒu",
+    "russian": "идти, ходить; уходить",
+    "isConcrete": true,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "外",
+    "pinyin": "wài",
+    "russian": "снаружи, вне",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "也",
+    "pinyin": "yě",
+    "russian": "тоже, также",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "最",
+    "pinyin": "zuì",
+    "russian": "самый",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "完",
+    "pinyin": "wán",
+    "russian": "заканчивать(ся)",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "一起",
+    "pinyin": "yìqǐ",
+    "russian": "вместе",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  },
+  {
+    "hanzi": "左边",
+    "pinyin": "zuǒbian",
+    "russian": "слева, левая сторона",
+    "isConcrete": false,
+    "hasImage": false,
+    "imagePath": null,
+    "hasAudio": false
+  }
+]
