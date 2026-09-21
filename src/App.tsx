@@ -5,12 +5,14 @@ import Practice from './pages/Practice'
 import Progress from './pages/Progress'
 import Reports from './pages/Reports'
 import Admin from './pages/Admin'
+import AuthConfirm from './pages/AuthConfirm'
 import NotFound from './pages/NotFound'
 
 export default function App() {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
+      <Route path="/auth/confirm" element={<AuthConfirm />} />
       <Route path="/" element={<Home />} />
       <Route path="/practice" element={<Practice />} />
       <Route path="/progress" element={<Progress />} />

@@ -6,15 +6,16 @@
 -- ═══════════════════════════════════════════════════════════════════════════
 
 -- ─── 开发者邮箱名单（只有这些邮箱可以导入词表/上传录音/删词） ────────────────
+-- 注意：教师邮箱不写进本文件（仓库公开，保护隐私）。
+-- 首次/新增教师在 Supabase 后台 Table Editor 打开 developer_emails 表手动加一行，
+-- 或 SQL Editor 执行：
+--   insert into public.developer_emails (email) values ('teacher@example.com')
+--   on conflict (email) do nothing;
 create table if not exists public.developer_emails (
   email text primary key
 );
 
 alter table public.developer_emails enable row level security;
-
-insert into public.developer_emails (email)
-values ('liyunqing1220@163.com')
-on conflict (email) do nothing;
 
 -- 判断当前登录用户是否在开发者名单中（数据库内部使用）
 create or replace function public.is_developer()

@@ -7,7 +7,8 @@ let fontB64: string | null = null;
 
 async function loadFontB64(): Promise<string> {
   if (fontB64) return fontB64;
-  const resp = await fetch("/fonts/cjk-subset.ttf");
+  // 必须用 BASE_URL：线上是 GitHub Pages 项目子路径 /hanyu-quest/，绝对路径 /fonts/... 会 404
+  const resp = await fetch(`${import.meta.env.BASE_URL}fonts/cjk-subset.ttf`);
   if (!resp.ok) throw new Error("Не удалось загрузить шрифт");
   const buf = new Uint8Array(await resp.arrayBuffer());
   let binary = "";

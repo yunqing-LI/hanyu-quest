@@ -138,7 +138,16 @@ function parseLines(text: string): ParsedWord[] {
 
 // ─── 主页面 ──────────────────────────────────────────────────────────────────
 export default function Admin() {
-  const { user } = useAuth();
+  const { user, isRoleLoading } = useAuth();
+  if (isRoleLoading) {
+    return (
+      <Layout>
+        <div className="py-24 text-center text-muted-foreground">
+          Загрузка…
+        </div>
+      </Layout>
+    );
+  }
   if (user && user.role !== "admin") {
     return (
       <Layout>

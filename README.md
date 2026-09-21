@@ -27,7 +27,7 @@ npm run preview      # 本地预览构建产物
 | 配置 | 位置 |
 |---|---|
 | 班级邀请码 | `contracts/invite.ts`（`INVITE_CODE`） |
-| 开发者/教师邮箱 | `contracts/developer.ts`（`DEVELOPER_EMAILS`） |
+| 开发者/教师邮箱 | Supabase 数据库 `developer_emails` 表（Table Editor 管理，仓库不存明文） |
 | 每日题量 / SRS 间隔 / 徽章 | `contracts/quest.ts`（核心数值勿随意改） |
 | 部署子路径 | `vite.config.ts`（默认读 `.env` 的 `VITE_BASE_PATH`） |
 
