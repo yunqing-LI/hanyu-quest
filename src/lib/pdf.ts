@@ -278,7 +278,7 @@ export async function downloadLevelReport(
   doc.text("пиньинь", 42, y);
   doc.text("перевод", 78, y);
   doc.text("ур.", 172, y);
-  doc.text("✓/✗", 190, y, { align: "right" });
+  doc.text("✓/×", 190, y, { align: "right" });
   y += 5;
   for (const w of data.learned) {
     if (y > 270) {
