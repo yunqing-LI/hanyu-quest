@@ -4,6 +4,7 @@ import Layout from "@/components/Layout";
 import { queryClient } from "@/lib/query-client";
 import { useAuth } from "@/hooks/useAuth";
 import {
+  deleteAudio,
   deleteWord,
   fetchAdminWordList,
   importWords,
@@ -363,6 +364,22 @@ function AudioTab() {
     onError: (e: Error) => alert("Ошибка: " + e.message),
   });
 
+  const deleteMut = useMutation({
+    mutationFn: (wordId: number) => deleteAudio(wordId),
+    onSuccess: () => {
+      setMsg("Аудио удалено ✓");
+      queryClient.invalidateQueries({ queryKey: ADMIN_WORDS_KEY });
+      setTimeout(() => setMsg(null), 2500);
+    },
+    onError: (e: Error) => alert("Ошибка: " + e.message),
+  });
+
+  const confirmDelete = (w: { id: number; hanzi: string }) => {
+    if (window.confirm(`Удалить озвучку для слова «${w.hanzi}»?`)) {
+      deleteMut.mutate(w.id);
+    }
+  };
+
   const filtered = useMemo(() => {
     const list = words.data ?? [];
     const s = q.trim().toLowerCase();
@@ -432,7 +449,8 @@ function AudioTab() {
                   word={w}
                   onFile={(f) => sendFile(w.id, f)}
                   onPlay={() => play(w.id)}
-                  busy={uploadMut.isPending}
+                  onDelete={() => confirmDelete(w)}
+                  busy={uploadMut.isPending || deleteMut.isPending}
                 />
               ))}
               {filtered.length === 0 && (
@@ -454,11 +472,13 @@ function AudioRow({
   word,
   onFile,
   onPlay,
+  onDelete,
   busy,
 }: {
   word: { id: number; hanzi: string; pinyin: string; russian: string; hasAudio: boolean };
   onFile: (f: File) => void;
   onPlay: () => void;
+  onDelete: () => void;
   busy: boolean;
 }) {
   const ref = useRef<HTMLInputElement>(null);
@@ -486,6 +506,17 @@ function AudioRow({
           {word.hasAudio && (
             <Button variant="ghost" size="icon" onClick={onPlay} title="Прослушать">
               <Play className="w-4 h-4 text-accent" />
+            </Button>
+          )}
+          {word.hasAudio && (
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={onDelete}
+              disabled={busy}
+              title="Удалить озвучку"
+            >
+              <Trash2 className="w-4 h-4 text-destructive" />
             </Button>
           )}
           <Button

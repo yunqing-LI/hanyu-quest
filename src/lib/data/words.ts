@@ -127,6 +127,22 @@ export async function uploadAudio(
   return { ok: true, size: sizeBytes };
 }
 
+/** 删除单词录音；同时回写 words.has_audio = false */
+export async function deleteAudio(wordId: number): Promise<{ ok: true }> {
+  const { error: aErr } = await supabase
+    .from("word_audio")
+    .delete()
+    .eq("word_id", wordId);
+  must(aErr);
+
+  const { error: wErr } = await supabase
+    .from("words")
+    .update({ has_audio: false })
+    .eq("id", wordId);
+  must(wErr);
+  return { ok: true };
+}
+
 /** 删除一个词（连同进度与做题明细；RLS 需开发者策略） */
 export async function deleteWord(wordId: number): Promise<{ ok: true }> {
   const { error: pErr } = await supabase

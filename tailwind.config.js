@@ -72,11 +72,26 @@ module.exports = {
           "0%,70%,100%": { opacity: "1" },
           "20%,50%": { opacity: "0" },
         },
+        "correct-pop": {
+          "0%": { opacity: "0", transform: "scale(0.3)" },
+          "55%": { opacity: "1", transform: "scale(1.15)" },
+          "75%": { transform: "scale(0.95)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
+        },
+        sparkle: {
+          "0%": { opacity: "1", transform: "translate(-50%,-50%) scale(1)" },
+          "100%": {
+            opacity: "0",
+            transform: "translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(0.3)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "caret-blink": "caret-blink 1.25s ease-out infinite",
+        "correct-pop": "correct-pop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both",
+        sparkle: "sparkle 0.7s ease-out both",
       },
     },
   },

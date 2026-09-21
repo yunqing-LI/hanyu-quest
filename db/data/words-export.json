@@ -13,8 +13,8 @@
     "pinyin": "fēijī",
     "russian": "самолёт",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/飞机.jpg",
     "hasAudio": false
   },
   {
@@ -58,8 +58,8 @@
     "pinyin": "bàba",
     "russian": "папа",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/爸爸.jpg",
     "hasAudio": false
   },
   {
@@ -76,8 +76,8 @@
     "pinyin": "māma",
     "russian": "мама",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/妈妈.jpg",
     "hasAudio": false
   },
   {
@@ -85,8 +85,8 @@
     "pinyin": "bēizi",
     "russian": "стакан, чашка",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/杯子.jpg",
     "hasAudio": false
   },
   {
@@ -112,8 +112,8 @@
     "pinyin": "Běijīng",
     "russian": "Пекин",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/北京.jpg",
     "hasAudio": false
   },
   {
@@ -121,8 +121,8 @@
     "pinyin": "gōngzuò",
     "russian": "работать; работа",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/工作.jpg",
     "hasAudio": false
   },
   {
@@ -130,8 +130,8 @@
     "pinyin": "mǎi",
     "russian": "покупать",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/买.jpg",
     "hasAudio": false
   },
   {
@@ -148,8 +148,8 @@
     "pinyin": "gǒu",
     "russian": "собака",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/狗.jpg",
     "hasAudio": false
   },
   {
@@ -157,8 +157,8 @@
     "pinyin": "māo",
     "russian": "кошка",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/猫.jpg",
     "hasAudio": false
   },
   {
@@ -220,8 +220,8 @@
     "pinyin": "cài",
     "russian": "блюдо; овощи",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/菜.jpg",
     "hasAudio": false
   },
   {
@@ -238,8 +238,8 @@
     "pinyin": "mǐfàn",
     "russian": "варёный рис",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/米饭.jpg",
     "hasAudio": false
   },
   {
@@ -247,8 +247,8 @@
     "pinyin": "chá",
     "russian": "чай",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/茶.jpg",
     "hasAudio": false
   },
   {
@@ -256,8 +256,8 @@
     "pinyin": "hē",
     "russian": "пить",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/喝.jpg",
     "hasAudio": false
   },
   {
@@ -274,8 +274,8 @@
     "pinyin": "chī",
     "russian": "есть, кушать",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/吃.jpg",
     "hasAudio": false
   },
   {
@@ -301,8 +301,8 @@
     "pinyin": "chūzūchē",
     "russian": "такси",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/出租车.jpg",
     "hasAudio": false
   },
   {
@@ -328,8 +328,8 @@
     "pinyin": "dǎ diànhuà",
     "russian": "звонить по телефону",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/打电话.jpg",
     "hasAudio": false
   },
   {
@@ -436,8 +436,8 @@
     "pinyin": "diànnǎo",
     "russian": "компьютер",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/电脑.jpg",
     "hasAudio": false
   },
   {
@@ -445,8 +445,8 @@
     "pinyin": "jiā",
     "russian": "дом, семья",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/家.jpg",
     "hasAudio": false
   },
   {
@@ -463,8 +463,8 @@
     "pinyin": "diànshì",
     "russian": "телевизор; телевидение",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/电视.jpg",
     "hasAudio": false
   },
   {
@@ -490,8 +490,8 @@
     "pinyin": "diànyǐng",
     "russian": "фильм, кино",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/电影.jpg",
     "hasAudio": false
   },
   {
@@ -508,8 +508,8 @@
     "pinyin": "nǚ'ér",
     "russian": "дочь",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/女儿.jpg",
     "hasAudio": false
   },
   {
@@ -535,8 +535,8 @@
     "pinyin": "péngyou",
     "russian": "друг, друзья",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/朋友.jpg",
     "hasAudio": false
   },
   {
@@ -571,8 +571,8 @@
     "pinyin": "dú",
     "russian": "читать (вслух); учиться",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/读.jpg",
     "hasAudio": false
   },
   {
@@ -589,8 +589,8 @@
     "pinyin": "píngguǒ",
     "russian": "яблоко",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/苹果.jpg",
     "hasAudio": false
   },
   {
@@ -670,8 +670,8 @@
     "pinyin": "qián",
     "russian": "деньги",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/钱.jpg",
     "hasAudio": false
   },
   {
@@ -679,8 +679,8 @@
     "pinyin": "érzi",
     "russian": "сын",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/儿子.jpg",
     "hasAudio": false
   },
   {
@@ -688,8 +688,8 @@
     "pinyin": "lǎoshī",
     "russian": "учитель, преподаватель",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/老师.jpg",
     "hasAudio": false
   },
   {
@@ -733,8 +733,8 @@
     "pinyin": "fàndiàn",
     "russian": "ресторан; отель",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/饭店.jpg",
     "hasAudio": false
   },
   {
@@ -742,8 +742,8 @@
     "pinyin": "lěng",
     "russian": "холодный",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/冷.jpg",
     "hasAudio": false
   },
   {
@@ -751,8 +751,8 @@
     "pinyin": "rè",
     "russian": "горячий, жаркий",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/热.jpg",
     "hasAudio": false
   },
   {
@@ -760,8 +760,8 @@
     "pinyin": "rén",
     "russian": "человек, люди",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/人.jpg",
     "hasAudio": false
   },
   {
@@ -769,8 +769,8 @@
     "pinyin": "tiānqì",
     "russian": "погода",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/天气.jpg",
     "hasAudio": false
   },
   {
@@ -778,8 +778,8 @@
     "pinyin": "xuéxiào",
     "russian": "школа",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/学校.jpg",
     "hasAudio": false
   },
   {
@@ -796,8 +796,8 @@
     "pinyin": "tīng",
     "russian": "слушать",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/听.jpg",
     "hasAudio": false
   },
   {
@@ -823,8 +823,8 @@
     "pinyin": "tóngxué",
     "russian": "одноклассник, однокурсник",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/同学.jpg",
     "hasAudio": false
   },
   {
@@ -841,8 +841,8 @@
     "pinyin": "shāngdiàn",
     "russian": "магазин",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/商店.jpg",
     "hasAudio": false
   },
   {
@@ -859,8 +859,8 @@
     "pinyin": "yīfu",
     "russian": "одежда",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/衣服.jpg",
     "hasAudio": false
   },
   {
@@ -886,8 +886,8 @@
     "pinyin": "yīshēng",
     "russian": "врач",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/医生.jpg",
     "hasAudio": false
   },
   {
@@ -913,8 +913,8 @@
     "pinyin": "yīyuàn",
     "russian": "больница",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/医院.jpg",
     "hasAudio": false
   },
   {
@@ -940,8 +940,8 @@
     "pinyin": "yǐzi",
     "russian": "стул",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/椅子.jpg",
     "hasAudio": false
   },
   {
@@ -994,8 +994,8 @@
     "pinyin": "yuè",
     "russian": "месяц; луна",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/月.jpg",
     "hasAudio": false
   },
   {
@@ -1039,8 +1039,8 @@
     "pinyin": "xià yǔ",
     "russian": "идёт дождь",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/下雨.jpg",
     "hasAudio": false
   },
   {
@@ -1066,8 +1066,8 @@
     "pinyin": "xiānsheng",
     "russian": "господин, мистер; муж",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/先生.jpg",
     "hasAudio": false
   },
   {
@@ -1084,8 +1084,8 @@
     "pinyin": "shū",
     "russian": "книга",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/书.jpg",
     "hasAudio": false
   },
   {
@@ -1111,8 +1111,8 @@
     "pinyin": "shuǐ",
     "russian": "вода",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/水.jpg",
     "hasAudio": false
   },
   {
@@ -1138,8 +1138,8 @@
     "pinyin": "shuǐguǒ",
     "russian": "фрукты",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/水果.jpg",
     "hasAudio": false
   },
   {
@@ -1156,8 +1156,8 @@
     "pinyin": "Zhōngguó",
     "russian": "Китай",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/中国.jpg",
     "hasAudio": false
   },
   {
@@ -1165,8 +1165,8 @@
     "pinyin": "shuìjiào",
     "russian": "спать, ложиться спать",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/睡觉.jpg",
     "hasAudio": false
   },
   {
@@ -1192,8 +1192,8 @@
     "pinyin": "shuō",
     "russian": "говорить, сказать",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/说.jpg",
     "hasAudio": false
   },
   {
@@ -1228,8 +1228,8 @@
     "pinyin": "xiě",
     "russian": "писать (иероглифы)",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/写.jpg",
     "hasAudio": false
   },
   {
@@ -1237,8 +1237,8 @@
     "pinyin": "zhuōzi",
     "russian": "стол",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/桌子.jpg",
     "hasAudio": false
   },
   {
@@ -1264,8 +1264,8 @@
     "pinyin": "zì",
     "russian": "иероглиф",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/字.jpg",
     "hasAudio": false
   },
   {
@@ -1309,8 +1309,8 @@
     "pinyin": "xuésheng",
     "russian": "ученик, студент",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/学生.jpg",
     "hasAudio": false
   },
   {
@@ -1318,8 +1318,8 @@
     "pinyin": "zuò",
     "russian": "сидеть; садиться; ехать (на транспорте)",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/坐.jpg",
     "hasAudio": false
   },
   {
@@ -1336,8 +1336,8 @@
     "pinyin": "xuéxí",
     "russian": "учиться, изучать; учёба",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/学习.jpg",
     "hasAudio": false
   },
   {
@@ -1363,8 +1363,8 @@
     "pinyin": "gāo",
     "russian": "высокий",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/高.jpg",
     "hasAudio": false
   },
   {
@@ -1381,8 +1381,8 @@
     "pinyin": "bái",
     "russian": "белый",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/白.jpg",
     "hasAudio": false
   },
   {
@@ -1417,8 +1417,8 @@
     "pinyin": "gēge",
     "russian": "старший брат",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/哥哥.jpg",
     "hasAudio": false
   },
   {
@@ -1426,8 +1426,8 @@
     "pinyin": "kuài",
     "russian": "быстрый, быстро; скоро",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/快.jpg",
     "hasAudio": false
   },
   {
@@ -1435,8 +1435,8 @@
     "pinyin": "bāngzhù",
     "russian": "помогать; помощь",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/帮助.jpg",
     "hasAudio": false
   },
   {
@@ -1444,8 +1444,8 @@
     "pinyin": "gěi",
     "russian": "давать; для, (к)ому",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/给.jpg",
     "hasAudio": false
   },
   {
@@ -1462,8 +1462,8 @@
     "pinyin": "bàozhǐ",
     "russian": "газета",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/报纸.jpg",
     "hasAudio": false
   },
   {
@@ -1471,8 +1471,8 @@
     "pinyin": "gōnggòng qìchē",
     "russian": "автобус",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/公共汽车.jpg",
     "hasAudio": false
   },
   {
@@ -1480,8 +1480,8 @@
     "pinyin": "lèi",
     "russian": "уставший",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/累.jpg",
     "hasAudio": false
   },
   {
@@ -1498,8 +1498,8 @@
     "pinyin": "gōngsī",
     "russian": "компания, фирма",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/公司.jpg",
     "hasAudio": false
   },
   {
@@ -1543,8 +1543,8 @@
     "pinyin": "bīnguǎn",
     "russian": "гостиница",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/宾馆.jpg",
     "hasAudio": false
   },
   {
@@ -1570,8 +1570,8 @@
     "pinyin": "cháng",
     "russian": "длинный",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/长.jpg",
     "hasAudio": false
   },
   {
@@ -1588,8 +1588,8 @@
     "pinyin": "lù",
     "russian": "дорога, путь",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/路.jpg",
     "hasAudio": false
   },
   {
@@ -1597,8 +1597,8 @@
     "pinyin": "chàng gē",
     "russian": "петь (песни)",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/唱歌.jpg",
     "hasAudio": false
   },
   {
@@ -1606,8 +1606,8 @@
     "pinyin": "háizi",
     "russian": "ребёнок, дети",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/孩子.jpg",
     "hasAudio": false
   },
   {
@@ -1615,8 +1615,8 @@
     "pinyin": "lǚyóu",
     "russian": "путешествовать; туризм",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/旅游.jpg",
     "hasAudio": false
   },
   {
@@ -1633,8 +1633,8 @@
     "pinyin": "hǎochī",
     "russian": "вкусный",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/好吃.jpg",
     "hasAudio": false
   },
   {
@@ -1642,8 +1642,8 @@
     "pinyin": "mài",
     "russian": "продавать",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/卖.jpg",
     "hasAudio": false
   },
   {
@@ -1651,8 +1651,8 @@
     "pinyin": "chuān",
     "russian": "надевать, носить (одежду)",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/穿.jpg",
     "hasAudio": false
   },
   {
@@ -1660,8 +1660,8 @@
     "pinyin": "hēi",
     "russian": "чёрный",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/黑.jpg",
     "hasAudio": false
   },
   {
@@ -1669,8 +1669,8 @@
     "pinyin": "màn",
     "russian": "медленный",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/慢.jpg",
     "hasAudio": false
   },
   {
@@ -1687,8 +1687,8 @@
     "pinyin": "hóng",
     "russian": "красный",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/红.jpg",
     "hasAudio": false
   },
   {
@@ -1714,8 +1714,8 @@
     "pinyin": "huǒchēzhàn",
     "russian": "железнодорожный вокзал",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/火车站.jpg",
     "hasAudio": false
   },
   {
@@ -1741,8 +1741,8 @@
     "pinyin": "jīchǎng",
     "russian": "аэропорт",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/机场.jpg",
     "hasAudio": false
   },
   {
@@ -1750,8 +1750,8 @@
     "pinyin": "mèimei",
     "russian": "младшая сестра",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/妹妹.jpg",
     "hasAudio": false
   },
   {
@@ -1759,8 +1759,8 @@
     "pinyin": "dǎ lánqiú",
     "russian": "играть в баскетбол",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/打篮球.jpg",
     "hasAudio": false
   },
   {
@@ -1768,8 +1768,8 @@
     "pinyin": "jīdàn",
     "russian": "(куриное) яйцо",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/鸡蛋.jpg",
     "hasAudio": false
   },
   {
@@ -1777,8 +1777,8 @@
     "pinyin": "mén",
     "russian": "дверь",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/门.jpg",
     "hasAudio": false
   },
   {
@@ -1804,8 +1804,8 @@
     "pinyin": "miàntiáor",
     "russian": "лапша",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/面条儿.jpg",
     "hasAudio": false
   },
   {
@@ -1822,8 +1822,8 @@
     "pinyin": "jiàoshì",
     "russian": "класс, аудитория",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/教室.jpg",
     "hasAudio": false
   },
   {
@@ -1831,8 +1831,8 @@
     "pinyin": "nán",
     "russian": "мужской; мужчина",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/男.jpg",
     "hasAudio": false
   },
   {
@@ -1849,8 +1849,8 @@
     "pinyin": "jiějie",
     "russian": "старшая сестра",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/姐姐.jpg",
     "hasAudio": false
   },
   {
@@ -1867,8 +1867,8 @@
     "pinyin": "děng",
     "russian": "ждать",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/等.jpg",
     "hasAudio": false
   },
   {
@@ -1885,8 +1885,8 @@
     "pinyin": "niúnǎi",
     "russian": "молоко",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/牛奶.jpg",
     "hasAudio": false
   },
   {
@@ -1894,8 +1894,8 @@
     "pinyin": "dìdi",
     "russian": "младший брат",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/弟弟.jpg",
     "hasAudio": false
   },
   {
@@ -1912,8 +1912,8 @@
     "pinyin": "nǚ",
     "russian": "женский; женщина",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/女.jpg",
     "hasAudio": false
   },
   {
@@ -1966,8 +1966,8 @@
     "pinyin": "pǎobù",
     "russian": "бегать, бег",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/跑步.jpg",
     "hasAudio": false
   },
   {
@@ -2011,8 +2011,8 @@
     "pinyin": "kāfēi",
     "russian": "кофе",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/咖啡.jpg",
     "hasAudio": false
   },
   {
@@ -2020,8 +2020,8 @@
     "pinyin": "piào",
     "russian": "билет",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/票.jpg",
     "hasAudio": false
   },
   {
@@ -2029,8 +2029,8 @@
     "pinyin": "fángjiān",
     "russian": "комната",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/房间.jpg",
     "hasAudio": false
   },
   {
@@ -2047,8 +2047,8 @@
     "pinyin": "qīzi",
     "russian": "жена",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/妻子.jpg",
     "hasAudio": false
   },
   {
@@ -2065,8 +2065,8 @@
     "pinyin": "kǎoshì",
     "russian": "сдавать экзамен; экзамен",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/考试.jpg",
     "hasAudio": false
   },
   {
@@ -2074,8 +2074,8 @@
     "pinyin": "qǐchuáng",
     "russian": "вставать (с кровати)",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/起床.jpg",
     "hasAudio": false
   },
   {
@@ -2083,8 +2083,8 @@
     "pinyin": "fúwùyuán",
     "russian": "официант, обслуживающий персонал",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/服务员.jpg",
     "hasAudio": false
   },
   {
@@ -2110,8 +2110,8 @@
     "pinyin": "qiānbǐ",
     "russian": "карандаш",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/铅笔.jpg",
     "hasAudio": false
   },
   {
@@ -2119,8 +2119,8 @@
     "pinyin": "wán",
     "russian": "играть, развлекаться",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/玩.jpg",
     "hasAudio": false
   },
   {
@@ -2137,8 +2137,8 @@
     "pinyin": "qíng",
     "russian": "ясный, солнечный (о погоде)",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/晴.jpg",
     "hasAudio": false
   },
   {
@@ -2146,8 +2146,8 @@
     "pinyin": "wǎnshang",
     "russian": "вечер",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/晚上.jpg",
     "hasAudio": false
   },
   {
@@ -2227,8 +2227,8 @@
     "pinyin": "wèn",
     "russian": "спрашивать",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/问.jpg",
     "hasAudio": false
   },
   {
@@ -2236,8 +2236,8 @@
     "pinyin": "yīn",
     "russian": "пасмурный",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/阴.jpg",
     "hasAudio": false
   },
   {
@@ -2245,8 +2245,8 @@
     "pinyin": "shàngbān",
     "russian": "идти на работу, работать",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/上班.jpg",
     "hasAudio": false
   },
   {
@@ -2263,8 +2263,8 @@
     "pinyin": "yóuyǒng",
     "russian": "плавать",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/游泳.jpg",
     "hasAudio": false
   },
   {
@@ -2272,8 +2272,8 @@
     "pinyin": "shēntǐ",
     "russian": "тело; здоровье",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/身体.jpg",
     "hasAudio": false
   },
   {
@@ -2281,8 +2281,8 @@
     "pinyin": "xīguā",
     "russian": "арбуз",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/西瓜.jpg",
     "hasAudio": false
   },
   {
@@ -2299,8 +2299,8 @@
     "pinyin": "shēngbìng",
     "russian": "заболеть, болеть",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/生病.jpg",
     "hasAudio": false
   },
   {
@@ -2317,8 +2317,8 @@
     "pinyin": "yú",
     "russian": "рыба",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/鱼.jpg",
     "hasAudio": false
   },
   {
@@ -2326,8 +2326,8 @@
     "pinyin": "shēngrì",
     "russian": "день рождения",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/生日.jpg",
     "hasAudio": false
   },
   {
@@ -2335,8 +2335,8 @@
     "pinyin": "xǐ",
     "russian": "мыть, стирать",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/洗.jpg",
     "hasAudio": false
   },
   {
@@ -2371,8 +2371,8 @@
     "pinyin": "yùndòng",
     "russian": "заниматься спортом; спорт",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/运动.jpg",
     "hasAudio": false
   },
   {
@@ -2389,8 +2389,8 @@
     "pinyin": "xiào",
     "russian": "смеяться, улыбаться",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/笑.jpg",
     "hasAudio": false
   },
   {
@@ -2407,8 +2407,8 @@
     "pinyin": "shǒubiǎo",
     "russian": "наручные часы",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/手表.jpg",
     "hasAudio": false
   },
   {
@@ -2425,8 +2425,8 @@
     "pinyin": "zǎoshang",
     "russian": "утро (раннее)",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/早上.jpg",
     "hasAudio": false
   },
   {
@@ -2434,8 +2434,8 @@
     "pinyin": "shǒujī",
     "russian": "мобильный телефон",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/手机.jpg",
     "hasAudio": false
   },
   {
@@ -2452,8 +2452,8 @@
     "pinyin": "zhàngfu",
     "russian": "муж",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/丈夫.jpg",
     "hasAudio": false
   },
   {
@@ -2461,8 +2461,8 @@
     "pinyin": "shuōhuà",
     "russian": "говорить, разговаривать",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/说话.jpg",
     "hasAudio": false
   },
   {
@@ -2470,8 +2470,8 @@
     "pinyin": "xiūxi",
     "russian": "отдыхать; отдых",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/休息.jpg",
     "hasAudio": false
   },
   {
@@ -2488,8 +2488,8 @@
     "pinyin": "sòng",
     "russian": "дарить; провожать; доставлять",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/送.jpg",
     "hasAudio": false
   },
   {
@@ -2497,8 +2497,8 @@
     "pinyin": "xuě",
     "russian": "снег",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/雪.jpg",
     "hasAudio": false
   },
   {
@@ -2524,8 +2524,8 @@
     "pinyin": "yánsè",
     "russian": "цвет",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/颜色.jpg",
     "hasAudio": false
   },
   {
@@ -2551,8 +2551,8 @@
     "pinyin": "yǎnjing",
     "russian": "глаз, глаза",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/眼睛.jpg",
     "hasAudio": false
   },
   {
@@ -2569,8 +2569,8 @@
     "pinyin": "tī zúqiú",
     "russian": "играть в футбол",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/踢足球.jpg",
     "hasAudio": false
   },
   {
@@ -2578,8 +2578,8 @@
     "pinyin": "yángròu",
     "russian": "баранина",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/羊肉.jpg",
     "hasAudio": false
   },
   {
@@ -2605,8 +2605,8 @@
     "pinyin": "yào",
     "russian": "лекарство",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/药.jpg",
     "hasAudio": false
   },
   {
@@ -2623,8 +2623,8 @@
     "pinyin": "tiàowǔ",
     "russian": "танцевать",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/跳舞.jpg",
     "hasAudio": false
   },
   {
@@ -2641,8 +2641,8 @@
     "pinyin": "zǒu",
     "russian": "идти, ходить; уходить",
     "isConcrete": true,
-    "hasImage": false,
-    "imagePath": null,
+    "hasImage": true,
+    "imagePath": "images/words/走.jpg",
     "hasAudio": false
   },
   {

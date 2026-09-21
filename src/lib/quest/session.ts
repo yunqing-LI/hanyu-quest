@@ -18,10 +18,10 @@ export function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-/** 为一个词分配题型：有图的直观词四种都可能，抽象词只有题型1和4（原样移植） */
+/** 为一个词分配题型：带图的词四种题型都可能，无图的词只有题型1和4 */
 export function assignType(word: Word): ExerciseType {
   const pool: ExerciseType[] =
-    word.isConcrete && word.hasImage
+    word.hasImage
       ? [
           ExerciseTypes.ZhToRu,
           ExerciseTypes.WordToImage,

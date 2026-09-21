@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { Link, useNavigate } from "react-router";
 import { useMutation } from "@tanstack/react-query";
 import Layout from "@/components/Layout";
@@ -18,7 +18,31 @@ import {
   ExerciseTypes,
 } from "@contracts/quest";
 import type { ExerciseItem } from "@/lib/quest/types";
-import { Bell, CheckCircle2, Flame, RotateCcw, Trophy } from "lucide-react";
+import { Bell, Check, CheckCircle2, Flame, RotateCcw, Trophy } from "lucide-react";
+import { playCorrectSound } from "@/lib/sfx";
+
+/** 答对时随机展示的鼓励语 */
+const PRAISES = [
+  "Молодец!",
+  "Отлично!",
+  "Супер!",
+  "Великолепно!",
+  "Точно!",
+  "Блестяще!",
+  "Так держать!",
+];
+
+/** 鼓励动画的彩纸颗粒：方向向量 + 颜色 */
+const SPARKS: { dx: number; dy: number; color: string }[] = [
+  { dx: -90, dy: -70, color: "#f59e0b" },
+  { dx: 90, dy: -80, color: "#22c55e" },
+  { dx: -110, dy: 10, color: "#3b82f6" },
+  { dx: 110, dy: 0, color: "#ec4899" },
+  { dx: -70, dy: 80, color: "#a855f7" },
+  { dx: 75, dy: 85, color: "#f59e0b" },
+  { dx: 0, dy: -110, color: "#22c55e" },
+  { dx: 0, dy: 110, color: "#3b82f6" },
+];
 
 type Item = ExerciseItem & {
   /** 客户端本地重现标记（答错后再练一次，不上报） */
@@ -39,6 +63,7 @@ export default function Practice() {
   const [answered, setAnswered] = useState<"correct" | "wrong" | null>(null);
   const [picked, setPicked] = useState<number | null>(null);
   const [flipped, setFlipped] = useState(false);
+  const [praise, setPraise] = useState<string | null>(null);
   const [startTime] = useState(Date.now());
   const [result, setResult] = useState<{
     total: number;
@@ -95,6 +120,7 @@ export default function Practice() {
     setAnswered(null);
     setPicked(null);
     setFlipped(false);
+    setPraise(null);
     if (nextPos >= nextQueue.length) {
       const durationSec = Math.round((Date.now() - startTime) / 1000);
       finishMut.mutate(
@@ -113,12 +139,19 @@ export default function Practice() {
     }
   };
 
+  /** 答对：音效 + 鼓励语（视觉反馈由 answered === "correct" 的覆盖层展示） */
+  const celebrate = () => {
+    playCorrectSound();
+    setPraise(PRAISES[Math.floor(Math.random() * PRAISES.length)]);
+  };
+
   /** 选择题作答 */
   const choose = (optIdx: number) => {
     if (!item || answered) return;
     const good = optIdx === item.correctIndex;
     setPicked(optIdx);
     setAnswered(good ? "correct" : "wrong");
+    if (good) celebrate();
 
     if (!item.isRepeat) {
       answerMut.mutate({
@@ -134,13 +167,14 @@ export default function Practice() {
         ? [...queue, { ...item, isRepeat: true }]
         : queue;
     setQueue(nextQueue);
-    setTimeout(() => advance(nextQueue, pos + 1), good ? 700 : 1400);
+    setTimeout(() => advance(nextQueue, pos + 1), good ? 1000 : 1400);
   };
 
   /** 翻面卡自评 */
   const rate = (known: boolean) => {
     if (!item || answered) return;
     setAnswered(known ? "correct" : "wrong");
+    if (known) celebrate();
     if (!item.isRepeat) {
       answerMut.mutate({
         sessionId,
@@ -262,6 +296,32 @@ export default function Practice() {
 
   return (
     <Layout>
+      {/* 答对鼓励：音效与动画同时出现 */}
+      {answered === "correct" && (
+        <div className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center">
+          <div className="relative flex flex-col items-center animate-correct-pop">
+            {SPARKS.map((s, i) => (
+              <span
+                key={i}
+                className="absolute left-1/2 top-1/2 h-2.5 w-2.5 rounded-full animate-sparkle"
+                style={
+                  {
+                    backgroundColor: s.color,
+                    "--dx": `${s.dx}px`,
+                    "--dy": `${s.dy}px`,
+                  } as CSSProperties
+                }
+              />
+            ))}
+            <div className="flex h-24 w-24 items-center justify-center rounded-full bg-accent text-accent-foreground shadow-xl shadow-accent/40">
+              <Check className="h-14 w-14" strokeWidth={3.5} />
+            </div>
+            <p className="mt-3 rounded-full bg-card/90 px-5 py-1.5 text-2xl font-bold text-accent shadow-md">
+              {praise}
+            </p>
+          </div>
+        </div>
+      )}
       <div className="max-w-xl mx-auto">
         {/* 进度条 */}
         <div className="flex items-center gap-3 mb-6">
@@ -366,7 +426,8 @@ export default function Practice() {
                 "border bg-card hover:border-primary/60 hover:bg-secondary/60";
               if (answered) {
                 if (isCorrect)
-                  cls = "border-2 border-accent bg-accent/10 text-accent font-medium";
+                  cls =
+                    "border-2 border-accent bg-accent/15 text-accent font-semibold scale-[1.03] shadow-lg shadow-accent/30 ring-2 ring-accent/50";
                 else if (isPicked)
                   cls = "border-2 border-destructive bg-destructive/10 text-destructive";
                 else cls = "border bg-card opacity-50";
