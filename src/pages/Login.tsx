@@ -56,7 +56,14 @@ export default function Login() {
       const { data, error: err } = await supabase.auth.signUp({
         email,
         password,
-        options: { data: { name: name || undefined } },
+        options: {
+          data: { name: name || undefined },
+          // 确认邮件的落地地址，必须显式带上 base 子路径
+          // （GitHub Pages 项目站点是 用户名.github.io/仓库名/），
+          // 否则 Supabase 用后台 Site URL，少子路径会落到 GitHub 404。
+          // 该地址需加入 Supabase 后台 Authentication → URL Configuration → Redirect URLs。
+          emailRedirectTo: window.location.origin + import.meta.env.BASE_URL,
+        },
       });
       setPending(false);
       if (err) {
