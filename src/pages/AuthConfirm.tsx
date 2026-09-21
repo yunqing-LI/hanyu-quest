@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router";
+import { useLocation, useNavigate, useSearchParams } from "react-router";
 import { supabase } from "@/lib/supabase";
 import { Button } from "@/components/ui/button";
 import {
@@ -12,15 +12,26 @@ import {
 type Status = "verifying" | "success" | "error";
 
 /**
- * 邮箱确认落地页（注册邮件里的链接指向这里）。
- * 用 token_hash 完成激活 → 显示"验证成功" → 2 秒后自动跳登录页。
+ * 邮箱确认落地页。两种进入方式：
+ * 1. 默认邮件模板（免费版不能自定义模板）：用户点确认链接跳回本站时
+ *    main.tsx 记下标记 → App 以 state.confirmed 跳转到这里，会话已建立，
+ *    直接显示"验证成功"。
+ * 2. 自定义模板（若将来配了 SMTP）：链接带 token_hash 参数进来，
+ *    这里调 verifyOtp 完成激活。
+ * 成功后 2 秒自动跳登录页（不保留登录态）。
  */
 export default function AuthConfirm() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [params] = useSearchParams();
   const tokenHash = params.get("token_hash");
   const type = params.get("type") ?? "signup";
-  const [status, setStatus] = useState<Status>(tokenHash ? "verifying" : "error");
+  // 方式 1：由 App 跳转时带上的标记
+  const confirmedViaRedirect =
+    (location.state as { confirmed?: boolean } | null)?.confirmed === true;
+  const [status, setStatus] = useState<Status>(
+    tokenHash ? "verifying" : confirmedViaRedirect ? "success" : "error",
+  );
   const [countdown, setCountdown] = useState(2);
   // StrictMode 会双跑 effect，用这个 ref 保证 verifyOtp 只调一次
   const tried = useRef(false);
@@ -29,7 +40,7 @@ export default function AuthConfirm() {
 
   useEffect(() => {
     if (tried.current) return;
-    if (!tokenHash) return; // 无 token 时初始状态就是 error
+    if (!tokenHash) return; // 无 token 时状态已由初始值决定
     tried.current = true;
     let mounted = true;
     (async () => {
@@ -56,7 +67,8 @@ export default function AuthConfirm() {
   useEffect(() => {
     if (status !== "success") return;
     if (countdown <= 0) {
-      navigate("/login");
+      // 不保留登录态（默认模板模式下此刻已有会话），退出后跳登录页
+      void supabase.auth.signOut().finally(() => navigate("/login"));
       return;
     }
     const t = setTimeout(() => setCountdown((c) => c - 1), 1000);
