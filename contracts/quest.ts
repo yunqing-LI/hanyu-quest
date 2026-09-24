@@ -6,6 +6,9 @@ export const BRAND_LINE = "китайский с Ли Лаоши";
 /** 每日固定题量 */
 export const DAILY_GOAL = 30;
 
+/** 每天保底的新词名额：到期复习词最多占 DAILY_GOAL - DAILY_NEW_WORDS 席，防止复习挤掉全部新词 */
+export const DAILY_NEW_WORDS = 18;
+
 /** 掌握度等级 0-5 对应的复习间隔（天）。level 越高间隔越长 */
 export const SRS_INTERVALS_DAYS = [1, 1, 3, 7, 15, 30] as const;
 export const MAX_LEVEL = 5;

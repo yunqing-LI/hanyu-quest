@@ -2,7 +2,7 @@ import type {
   ExerciseItemRow,
   ExerciseSessionRow,
 } from "@contracts/types";
-import { supabase } from "@/lib/supabase";
+import { supabase, myUserId } from "@/lib/supabase";
 import { mapWord } from "./words";
 import { buildLevelReport, buildRangeReport } from "@/lib/quest/report";
 import type { LevelReportData, RangeReportData } from "@/lib/pdf";
@@ -11,11 +11,13 @@ function must(error: { message: string } | null): void {
   if (error) throw new Error(error.message);
 }
 
-/** 拉取一份日期范围内的全部原始数据，再在本地聚合（原 reports 路由逻辑） */
+/** 拉取一份日期范围内的全部原始数据，再在本地聚合（原 reports 路由逻辑；只取本人数据） */
 async function fetchRangeData(from: string, to: string) {
+  const uid = await myUserId();
   const { data: sessionRows, error: sErr } = await supabase
     .from("exercise_sessions")
     .select("*")
+    .eq("user_id", uid)
     .gte("date", from)
     .lte("date", to)
     .order("date", { ascending: true });
@@ -36,6 +38,7 @@ async function fetchRangeData(from: string, to: string) {
   const { data: checkinRows, error: cErr } = await supabase
     .from("checkins")
     .select("date")
+    .eq("user_id", uid)
     .gte("date", from)
     .lte("date", to)
     .order("date", { ascending: true });
@@ -78,8 +81,9 @@ export async function fetchRangeReport(
   );
 }
 
-/** 当前级别报告：词表总掌握进度 */
+/** 当前级别报告：词表总掌握进度（只看本人） */
 export async function fetchLevelReport(): Promise<LevelReportData> {
+  const uid = await myUserId();
   const { data: wordRows, error: wErr } = await supabase
     .from("words")
     .select("*")
@@ -87,7 +91,8 @@ export async function fetchLevelReport(): Promise<LevelReportData> {
   must(wErr);
   const { data: progressRows, error: pErr } = await supabase
     .from("user_word_progress")
-    .select("*");
+    .select("*")
+    .eq("user_id", uid);
   must(pErr);
 
   return buildLevelReport(

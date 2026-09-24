@@ -56,10 +56,17 @@ export default function Practice() {
   const navigate = useNavigate();
 
   const [phase, setPhase] = useState<Phase>("starting");
+  const [emptyReason, setEmptyReason] = useState<"no_words" | "all_done">(
+    "no_words",
+  );
   const [sessionId, setSessionId] = useState(0);
   const [queue, setQueue] = useState<Item[]>([]);
   const [pos, setPos] = useState(0); // 当前做到队列第几题
   const [originalTotal, setOriginalTotal] = useState(0);
+  /** 本地累计答对数：finishSession 失败时兜底出结果页用 */
+  const correctCountRef = useRef(0);
+  /** 进度写库失败标记：显示警告条，不再静默吞错 */
+  const [saveError, setSaveError] = useState(false);
   const [answered, setAnswered] = useState<"correct" | "wrong" | null>(null);
   const [picked, setPicked] = useState<number | null>(null);
   const [flipped, setFlipped] = useState(false);
@@ -74,8 +81,17 @@ export default function Practice() {
   } | null>(null);
 
   const startMut = useMutation({ mutationFn: startDaily });
-  const answerMut = useMutation({ mutationFn: submitAnswer });
-  const finishMut = useMutation({ mutationFn: finishSession });
+  const answerMut = useMutation({
+    mutationFn: submitAnswer,
+    onError: (e) => {
+      console.error("[submitAnswer] 进度写库失败:", e);
+      setSaveError(true);
+    },
+  });
+  const finishMut = useMutation({
+    mutationFn: finishSession,
+    onError: (e) => console.error("[finishSession] 失败:", e),
+  });
 
   const startedRef = useRef(false);
   useEffect(() => {
@@ -86,6 +102,7 @@ export default function Practice() {
       {
         onSuccess: (data) => {
           if (data.empty) {
+            setEmptyReason(data.reason);
             setPhase("empty");
             return;
           }
@@ -140,6 +157,20 @@ export default function Practice() {
             queryClient.invalidateQueries({ queryKey: ["dashboard"] });
             queryClient.invalidateQueries({ queryKey: ["calendar"] });
           },
+          onError: () => {
+            // 服务器没存上也不把用户卡在最后一题：用本地统计出结果页
+            setResult({
+              total: originalTotal,
+              correct: correctCountRef.current,
+              accuracy:
+                originalTotal > 0
+                  ? Math.round((correctCountRef.current / originalTotal) * 100)
+                  : 0,
+              streak: 0,
+              newBadges: [],
+            });
+            setPhase("finished");
+          },
         },
       );
     } else {
@@ -160,6 +191,7 @@ export default function Practice() {
     setPicked(optIdx);
     setAnswered(good ? "correct" : "wrong");
     if (good) celebrate();
+    if (good && !item.isRepeat) correctCountRef.current += 1;
 
     if (!item.isRepeat) {
       answerMut.mutate({
@@ -183,6 +215,7 @@ export default function Practice() {
     if (!item || answered) return;
     setAnswered(known ? "correct" : "wrong");
     if (known) celebrate();
+    if (known && !item.isRepeat) correctCountRef.current += 1;
     if (!item.isRepeat) {
       answerMut.mutate({
         sessionId,
@@ -228,11 +261,24 @@ export default function Practice() {
     return (
       <Layout>
         <div className="py-24 text-center space-y-4">
-          <p className="text-4xl">📚</p>
-          <h1 className="text-xl font-semibold">Словарь пока пуст</h1>
-          <p className="text-muted-foreground">
-            Учитель ещё не загрузил слова. Загляните позже!
-          </p>
+          {emptyReason === "all_done" ? (
+            <>
+              <p className="text-4xl">🎉</p>
+              <h1 className="text-xl font-semibold">На сегодня всё!</h1>
+              <p className="text-muted-foreground">
+                Нет слов для повторения — выученные слова ещё «отдыхают».
+                Загляните завтра!
+              </p>
+            </>
+          ) : (
+            <>
+              <p className="text-4xl">📚</p>
+              <h1 className="text-xl font-semibold">Словарь пока пуст</h1>
+              <p className="text-muted-foreground">
+                Учитель ещё не загрузил слова. Загляните позже!
+              </p>
+            </>
+          )}
           <Button variant="outline" onClick={() => navigate("/")}>
             На главную
           </Button>
@@ -345,6 +391,12 @@ export default function Practice() {
         </div>
       )}
       <div className="max-w-xl mx-auto">
+        {saveError && (
+          <p className="mb-3 rounded-lg border border-destructive/40 bg-destructive/10 px-3 py-2 text-sm text-destructive">
+            Не удалось сохранить прогресс. Проверьте подключение к интернету —
+            иначе ответы потеряются.
+          </p>
+        )}
         {/* 进度条 */}
         <div className="flex items-center gap-3 mb-6">
           <ProgressBar

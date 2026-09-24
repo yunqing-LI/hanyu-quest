@@ -18,3 +18,15 @@ export const supabase = createClient(url ?? "", anonKey ?? "", {
     autoRefreshToken: true,
   },
 });
+
+/**
+ * 当前登录用户 id（未登录则抛错）。
+ * 所有「本人数据」查询都必须显式按它过滤：RLS 策略对开发者放行全表
+ * （user_id = auth.uid() or is_developer()），只靠 RLS 会把别人的数据混进来。
+ */
+export async function myUserId(): Promise<string> {
+  const { data, error } = await supabase.auth.getUser();
+  if (error) throw new Error(error.message);
+  if (!data.user) throw new Error("Не удалось определить пользователя");
+  return data.user.id;
+}

@@ -1,6 +1,7 @@
 import {
   AnswerResults,
   DAILY_GOAL,
+  MASTERED_LEVEL,
   type AnswerResult,
   type ExerciseType,
 } from "@contracts/quest";
@@ -9,7 +10,7 @@ import type {
   ExerciseSessionRow,
   UserWordProgressRow,
 } from "@contracts/types";
-import { supabase } from "@/lib/supabase";
+import { supabase, myUserId } from "@/lib/supabase";
 import { mapWord } from "./words";
 import { buildDailyItems, pickDailyWords } from "@/lib/quest/session";
 import {
@@ -43,9 +44,11 @@ function mapProgress(r: UserWordProgressRow): WordProgress {
 }
 
 async function fetchProgressRows(): Promise<UserWordProgressRow[]> {
+  const uid = await myUserId();
   const { data, error } = await supabase
     .from("user_word_progress")
-    .select("*");
+    .select("*")
+    .eq("user_id", uid);
   must(error);
   return (data ?? []) as UserWordProgressRow[];
 }
@@ -63,9 +66,11 @@ async function fetchSessionRow(
 }
 
 async function fetchCheckinDates(): Promise<string[]> {
+  const uid = await myUserId();
   const { data, error } = await supabase
     .from("checkins")
     .select("date")
+    .eq("user_id", uid)
     .order("date", { ascending: true });
   must(error);
   return (data ?? []).map((r) => r.date as string);
@@ -74,17 +79,19 @@ async function fetchCheckinDates(): Promise<string[]> {
 // ─── 首页仪表盘（原 practice.dashboard） ─────────────────────────────────────
 
 export async function fetchDashboard(today: string): Promise<DashboardData> {
+  const uid = await myUserId();
   const [progress, checkinDates, badgeRows, wordsRes, sessions] =
     await Promise.all([
       fetchProgressRows(),
       fetchCheckinDates(),
-      supabase.from("badges").select("badge_code, earned_at"),
+      supabase.from("badges").select("badge_code, earned_at").eq("user_id", uid),
       supabase
         .from("words")
         .select("*", { count: "exact", head: true }),
       supabase
         .from("exercise_sessions")
         .select("total, correct, completed_at")
+        .eq("user_id", uid)
         .eq("date", today),
     ]);
   must(badgeRows.error);
@@ -105,7 +112,8 @@ export async function fetchDashboard(today: string): Promise<DashboardData> {
   const levelDistMap = new Map<number, number>();
   let dueCount = 0;
   for (const p of progress) {
-    if (p.next_due_date <= today) dueCount++;
+    // 已掌握（level>=4）的词不再计入「待复习」，与 pickDailyWords 的排除保持一致
+    if (p.next_due_date <= today && p.level < MASTERED_LEVEL) dueCount++;
     levelDistMap.set(p.level, (levelDistMap.get(p.level) ?? 0) + 1);
   }
 
@@ -131,9 +139,11 @@ export async function fetchDashboard(today: string): Promise<DashboardData> {
 // ─── 打卡日历（原 practice.calendar） ────────────────────────────────────────
 
 export async function fetchCalendar(month: string): Promise<string[]> {
+  const uid = await myUserId();
   const { data, error } = await supabase
     .from("checkins")
     .select("date")
+    .eq("user_id", uid)
     .like("date", `${month}-%`)
     .order("date", { ascending: true });
   must(error);
@@ -143,7 +153,7 @@ export async function fetchCalendar(month: string): Promise<string[]> {
 // ─── 开始每日练习（原 practice.startDaily） ──────────────────────────────────
 
 export type StartDailyResult =
-  | { empty: true; sessionId: 0; items: [] }
+  | { empty: true; reason: "no_words" | "all_done"; sessionId: 0; items: [] }
   | { empty: false; sessionId: number; items: ExerciseItem[] };
 
 export async function startDaily(input: {
@@ -160,7 +170,13 @@ export async function startDaily(input: {
 
   const picked = pickDailyWords(allWords, progress, today);
   if (picked.length === 0) {
-    return { empty: true, sessionId: 0, items: [] };
+    // 词库为空 vs 词都学过且今天没有到期复习，是两种不同的空态
+    return {
+      empty: true,
+      reason: allWords.length === 0 ? "no_words" : "all_done",
+      sessionId: 0,
+      items: [],
+    };
   }
 
   const { data: session, error: sErr } = await supabase
@@ -209,9 +225,13 @@ export async function submitAnswer(input: {
   must(sErr);
 
   // SRS 进度：存在则更新，不存在则插入（upsert 语义与原逻辑一致）
+  // 必须显式按本人 user_id 过滤：RLS 对开发者放行全表，不带过滤时
+  // maybeSingle 可能命中别人的行（多人同学一个词时会直接报错，进度永远写不进去）
+  const uid = await myUserId();
   const { data: existing, error: pErr } = await supabase
     .from("user_word_progress")
     .select("*")
+    .eq("user_id", uid)
     .eq("word_id", input.wordId)
     .maybeSingle();
   must(pErr);
@@ -257,6 +277,7 @@ export async function finishSession(input: {
   const session = await fetchSessionRow(input.sessionId);
   if (!session) throw new Error("Session not found");
 
+  const uid = await myUserId();
   const { error: sErr } = await supabase
     .from("exercise_sessions")
     .update({
@@ -276,10 +297,11 @@ export async function finishSession(input: {
   const [checkinDates, progress, badgeRows, answersRes] = await Promise.all([
     fetchCheckinDates(),
     fetchProgressRows(),
-    supabase.from("badges").select("badge_code"),
+    supabase.from("badges").select("badge_code").eq("user_id", uid),
     supabase
       .from("exercise_items")
-      .select("*", { count: "exact", head: true }),
+      .select("*", { count: "exact", head: true })
+      .eq("user_id", uid),
   ]);
   must(badgeRows.error);
   must(answersRes.error);
