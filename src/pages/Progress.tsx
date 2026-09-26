@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import Layout from "@/components/Layout";
-import { fetchCalendar, fetchDashboard } from "@/lib/data/practice";
+import CheckinCalendar from "@/components/CheckinCalendar";
+import { fetchCalendarActivity, fetchDashboard } from "@/lib/data/practice";
 import { Button } from "@/components/ui/button";
 import {
   todayStr,
   currentMonthStr,
-  monthGrid,
   ruMonthName,
   shiftMonth,
   formatRuDate,
@@ -28,10 +28,9 @@ export default function Progress() {
   const today = todayStr();
   const [month, setMonth] = useState(currentMonthStr());
   const dash = useQuery({ queryKey: ["dashboard", today], queryFn: () => fetchDashboard(today) });
-  const cal = useQuery({ queryKey: ["calendar", month], queryFn: () => fetchCalendar(month) });
+  const cal = useQuery({ queryKey: ["calendar", month], queryFn: () => fetchCalendarActivity(month) });
 
-  const checked = new Set(cal.data ?? []);
-  const cells = monthGrid(month);
+  const activity = cal.data ?? {};
   const dist = dash.data?.levelDistribution ?? [];
   const maxCount = Math.max(1, ...dist.map((l) => Number(l.n)));
   const earned = new Map(
@@ -63,30 +62,18 @@ export default function Progress() {
               <ChevronRight className="w-4 h-4" />
             </Button>
           </div>
-          <div className="grid grid-cols-7 gap-1 text-center text-xs">
-            {["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"].map((w) => (
-              <div key={w} className="py-1 text-muted-foreground">{w}</div>
-            ))}
-            {cells.map((c, i) =>
-              c === null ? (
-                <div key={i} />
-              ) : (
-                <div
-                  key={i}
-                  className={`aspect-square flex items-center justify-center rounded-md tabular-nums ${
-                    checked.has(c)
-                      ? "bg-primary text-primary-foreground font-semibold"
-                      : c === today
-                        ? "border-2 border-primary/50"
-                        : "text-muted-foreground"
-                  }`}
-                >
-                  {Number(c.slice(-2))}
-                </div>
-              ),
-            )}
+          <CheckinCalendar month={month} activity={activity} today={today} />
+          <div className="flex items-center gap-4 mt-3 text-[11px] text-muted-foreground">
+            <span className="flex items-center gap-1.5">
+              <span className="w-3 h-3 rounded-sm bg-primary/25" />
+              частично
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="w-3 h-3 rounded-sm bg-primary" />
+              цель выполнена
+            </span>
           </div>
-          <div className="flex items-center gap-2 mt-4 text-sm">
+          <div className="flex items-center gap-2 mt-3 text-sm">
             <Flame className="w-4 h-4 text-primary" fill="currentColor" />
             <span>
               Серия: <b>{dash.data?.streak ?? 0}</b>{" "}

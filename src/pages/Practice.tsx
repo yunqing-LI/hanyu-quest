@@ -15,6 +15,7 @@ import { todayStr } from "@/lib/dates";
 import {
   AnswerResults,
   BADGE_META,
+  DAILY_GOAL,
   ExerciseTypes,
 } from "@contracts/quest";
 import type { ExerciseItem } from "@/lib/quest/types";
@@ -67,6 +68,8 @@ export default function Practice() {
   const correctCountRef = useRef(0);
   /** 进度写库失败标记：显示警告条，不再静默吞错 */
   const [saveError, setSaveError] = useState(false);
+  /** 今日打卡成功标记（答满 DAILY_GOAL 时由 submitAnswer 触发）：完成页文案按它如实显示 */
+  const [checkedIn, setCheckedIn] = useState(false);
   const [answered, setAnswered] = useState<"correct" | "wrong" | null>(null);
   const [picked, setPicked] = useState<number | null>(null);
   const [flipped, setFlipped] = useState(false);
@@ -76,13 +79,21 @@ export default function Practice() {
     total: number;
     correct: number;
     accuracy: number;
-    streak: number;
+    streak: number | null; // finishSession 失败兜底时为 null（真实值未知，不显示假数字）
     newBadges: string[];
   } | null>(null);
 
   const startMut = useMutation({ mutationFn: startDaily });
   const answerMut = useMutation({
     mutationFn: submitAnswer,
+    onSuccess: (data) => {
+      // 答满当日目标即已打卡（服务端在 submitAnswer 内完成），刷新首页/日历缓存
+      if (data.answeredToday >= DAILY_GOAL && !checkedIn) {
+        setCheckedIn(true);
+        queryClient.invalidateQueries({ queryKey: ["dashboard"] });
+        queryClient.invalidateQueries({ queryKey: ["calendar"] });
+      }
+    },
     onError: (e) => {
       console.error("[submitAnswer] 进度写库失败:", e);
       setSaveError(true);
@@ -90,7 +101,10 @@ export default function Practice() {
   });
   const finishMut = useMutation({
     mutationFn: finishSession,
-    onError: (e) => console.error("[finishSession] 失败:", e),
+    onError: (e) => {
+      console.error("[finishSession] 失败:", e);
+      setSaveError(true);
+    },
   });
 
   const startedRef = useRef(false);
@@ -158,7 +172,8 @@ export default function Practice() {
             queryClient.invalidateQueries({ queryKey: ["calendar"] });
           },
           onError: () => {
-            // 服务器没存上也不把用户卡在最后一题：用本地统计出结果页
+            // 服务器没存上也不把用户卡在最后一题：用本地统计出结果页，
+            // 但 streak 未知（null），页面会显示保存失败警告而不是假数字
             setResult({
               total: originalTotal,
               correct: correctCountRef.current,
@@ -166,7 +181,7 @@ export default function Practice() {
                 originalTotal > 0
                   ? Math.round((correctCountRef.current / originalTotal) * 100)
                   : 0,
-              streak: 0,
+              streak: null,
               newBadges: [],
             });
             setPhase("finished");
@@ -299,9 +314,19 @@ export default function Practice() {
           <div>
             <h1 className="text-2xl font-bold">Задание выполнено!</h1>
             <p className="text-muted-foreground mt-1">
-              День отмечен в календаре ✓
+              {saveError && !checkedIn
+                ? "День пока не отмечен — см. предупреждение ниже"
+                : "День отмечен в календаре ✓"}
             </p>
           </div>
+
+          {saveError && (
+            <p className="rounded-lg border border-destructive/40 bg-destructive/10 px-3 py-2 text-sm text-destructive">
+              Не удалось сохранить результат целиком. Проверьте подключение к
+              интернету и обновите страницу или откройте главную сегодня —
+              отметка дня восстановится автоматически.
+            </p>
+          )}
 
           <div className="grid grid-cols-3 gap-3">
             <div className="rounded-xl border bg-card p-4">
@@ -322,11 +347,13 @@ export default function Practice() {
             </div>
           </div>
 
-          <div className="flex items-center justify-center gap-2 text-primary font-semibold">
-            <Flame className="w-5 h-5" fill="currentColor" />
-            {result.streak}{" "}
-            {result.streak === 1 ? "день" : result.streak < 5 ? "дня" : "дней"} подряд
-          </div>
+          {result.streak !== null && (
+            <div className="flex items-center justify-center gap-2 text-primary font-semibold">
+              <Flame className="w-5 h-5" fill="currentColor" />
+              {result.streak}{" "}
+              {result.streak === 1 ? "день" : result.streak < 5 ? "дня" : "дней"} подряд
+            </div>
+          )}
 
           {result.newBadges.length > 0 && (
             <div className="rounded-xl border-2 border-primary/40 bg-card p-4 space-y-2">
@@ -393,8 +420,8 @@ export default function Practice() {
       <div className="max-w-xl mx-auto">
         {saveError && (
           <p className="mb-3 rounded-lg border border-destructive/40 bg-destructive/10 px-3 py-2 text-sm text-destructive">
-            Не удалось сохранить прогресс. Проверьте подключение к интернету —
-            иначе ответы потеряются.
+            Не удалось сохранить прогресс. Проверьте подключение к интернету и
+            обновите страницу — уже отвеченные задания сохранены и не потеряются.
           </p>
         )}
         {/* 进度条 */}

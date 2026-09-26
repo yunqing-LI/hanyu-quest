@@ -11,6 +11,7 @@ import type {
   UserWordProgressRow,
 } from "@contracts/types";
 import { supabase, myUserId } from "@/lib/supabase";
+import { shiftMonth } from "@/lib/dates";
 import { mapWord } from "./words";
 import { buildDailyItems, pickDailyWords } from "@/lib/quest/session";
 import {
@@ -76,6 +77,15 @@ async function fetchCheckinDates(): Promise<string[]> {
   return (data ?? []).map((r) => r.date as string);
 }
 
+/** 打卡（幂等：同日重复靠唯一约束 + upsert 忽略；user_id 显式传，不依赖列默认值） */
+async function checkin(today: string): Promise<void> {
+  const uid = await myUserId();
+  const { error } = await supabase
+    .from("checkins")
+    .upsert({ user_id: uid, date: today }, { onConflict: "user_id,date" });
+  must(error);
+}
+
 // ─── 首页仪表盘（原 practice.dashboard） ─────────────────────────────────────
 
 export async function fetchDashboard(today: string): Promise<DashboardData> {
@@ -105,9 +115,13 @@ export async function fetchDashboard(today: string): Promise<DashboardData> {
   }[];
   const answeredToday = todaySessions.reduce((s, x) => s + x.total, 0);
   const correctToday = todaySessions.reduce((s, x) => s + x.correct, 0);
-  const doneToday = todaySessions.some(
-    (x) => x.completed_at !== null && x.total >= DAILY_GOAL,
-  );
+  const doneToday = answeredToday >= DAILY_GOAL;
+
+  // 自愈：当天已答满 DAILY_GOAL 但缺打卡（此前写库失败/旧逻辑中途退出）→ 进首页时自动补卡
+  if (doneToday && !checkinDates.includes(today)) {
+    await checkin(today);
+    checkinDates.push(today);
+  }
 
   const levelDistMap = new Map<number, number>();
   let dueCount = 0;
@@ -136,18 +150,27 @@ export async function fetchDashboard(today: string): Promise<DashboardData> {
   };
 }
 
-// ─── 打卡日历（原 practice.calendar） ────────────────────────────────────────
+// ─── 打卡日历（三态：0 题空白 / 1–(DAILY_GOAL-1) 浅色 / ≥DAILY_GOAL 实心） ────
 
-export async function fetchCalendar(month: string): Promise<string[]> {
+/** 返回该月每天答题数（按 exercise_sessions 聚合），无记录的日子不出现 */
+export async function fetchCalendarActivity(
+  month: string,
+): Promise<Record<string, number>> {
   const uid = await myUserId();
+  // 月份过滤必须用 gte/lt 范围：PostgREST 不支持在 date 列上用 like（400: date ~~ unknown）
   const { data, error } = await supabase
-    .from("checkins")
-    .select("date")
+    .from("exercise_sessions")
+    .select("date, total")
     .eq("user_id", uid)
-    .like("date", `${month}-%`)
-    .order("date", { ascending: true });
+    .gte("date", `${month}-01`)
+    .lt("date", `${shiftMonth(month, 1)}-01`);
   must(error);
-  return (data ?? []).map((r) => r.date as string);
+  const byDate: Record<string, number> = {};
+  for (const r of data ?? []) {
+    const date = r.date as string;
+    byDate[date] = (byDate[date] ?? 0) + (r.total as number);
+  }
+  return byDate;
 }
 
 // ─── 开始每日练习（原 practice.startDaily） ──────────────────────────────────
@@ -199,7 +222,7 @@ export async function submitAnswer(input: {
   exerciseType: ExerciseType;
   result: AnswerResult;
   today: string;
-}): Promise<{ ok: true; newLevel: number }> {
+}): Promise<{ ok: true; newLevel: number; answeredToday: number }> {
   const session = await fetchSessionRow(input.sessionId);
   if (!session) throw new Error("Session not found");
 
@@ -264,7 +287,23 @@ export async function submitAnswer(input: {
     must(error);
   }
 
-  return { ok: true, newLevel };
+  // 今日累计答题数（跨场次）。答满 DAILY_GOAL 立即打卡，不再等到
+  // 整个队列做完——中途退出/分多次练习/页面刷新都不再丢当天打卡
+  const { data: todayRows, error: tErr } = await supabase
+    .from("exercise_sessions")
+    .select("total")
+    .eq("user_id", uid)
+    .eq("date", input.today);
+  must(tErr);
+  const answeredToday = (todayRows ?? []).reduce(
+    (s, r) => s + (r.total as number),
+    0,
+  );
+  if (answeredToday >= DAILY_GOAL) {
+    await checkin(input.today);
+  }
+
+  return { ok: true, newLevel, answeredToday };
 }
 
 // ─── 完成今日练习：计时、打卡、发徽章（原 practice.finishSession） ──────────
@@ -287,11 +326,8 @@ export async function finishSession(input: {
     .eq("id", input.sessionId);
   must(sErr);
 
-  // 打卡（同日重复忽略，靠唯一约束 + upsert）
-  const { error: cErr } = await supabase
-    .from("checkins")
-    .upsert({ date: input.today }, { onConflict: "user_id,date" });
-  must(cErr);
+  // 打卡（一般在答满 DAILY_GOAL 时已由 submitAnswer 触发，这里兜底幂等）
+  await checkin(input.today);
 
   // 徽章评估
   const [checkinDates, progress, badgeRows, answersRes] = await Promise.all([

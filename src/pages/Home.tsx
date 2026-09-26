@@ -1,10 +1,11 @@
 import { Link } from "react-router";
 import { useQuery } from "@tanstack/react-query";
 import Layout from "@/components/Layout";
-import { fetchCalendar, fetchDashboard } from "@/lib/data/practice";
+import CheckinCalendar from "@/components/CheckinCalendar";
+import { fetchCalendarActivity, fetchDashboard } from "@/lib/data/practice";
 import { Button } from "@/components/ui/button";
 import { Progress as ProgressBar } from "@/components/ui/progress";
-import { todayStr, currentMonthStr, monthGrid, ruMonthName } from "@/lib/dates";
+import { todayStr, currentMonthStr, ruMonthName } from "@/lib/dates";
 import { BADGE_META, DAILY_GOAL, type BadgeCode } from "@contracts/quest";
 import { Flame, Play, CheckCircle2, BookOpen, GraduationCap, CalendarCheck } from "lucide-react";
 
@@ -12,12 +13,12 @@ export default function Home() {
   const today = todayStr();
   const month = currentMonthStr();
   const dash = useQuery({ queryKey: ["dashboard", today], queryFn: () => fetchDashboard(today) });
-  const cal = useQuery({ queryKey: ["calendar", month], queryFn: () => fetchCalendar(month) });
+  const cal = useQuery({ queryKey: ["calendar", month], queryFn: () => fetchCalendarActivity(month) });
 
   const d = dash.data;
-  const checked = new Set(cal.data ?? []);
-  const cells = monthGrid(month);
-  const todayChecked = checked.has(today);
+  const activity = cal.data ?? {};
+  const answeredToday = activity[today] ?? 0;
+  const todayDone = answeredToday >= DAILY_GOAL;
 
   return (
     <Layout>
@@ -111,33 +112,13 @@ export default function Home() {
             <h2 className="font-semibold">Календарь занятий</h2>
             <span className="text-sm text-muted-foreground">{ruMonthName(month)}</span>
           </div>
-          <div className="grid grid-cols-7 gap-1 text-center text-xs">
-            {["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"].map((w) => (
-              <div key={w} className="py-1 text-muted-foreground">{w}</div>
-            ))}
-            {cells.map((c, i) =>
-              c === null ? (
-                <div key={i} />
-              ) : (
-                <div
-                  key={i}
-                  className={`aspect-square flex items-center justify-center rounded-md tabular-nums ${
-                    checked.has(c)
-                      ? "bg-primary text-primary-foreground font-semibold"
-                      : c === today
-                        ? "border-2 border-primary/50 text-foreground"
-                        : "text-muted-foreground"
-                  }`}
-                >
-                  {Number(c.slice(-2))}
-                </div>
-              ),
-            )}
-          </div>
+          <CheckinCalendar month={month} activity={activity} today={today} />
           <p className="text-xs text-muted-foreground mt-3">
-            {todayChecked
+            {todayDone
               ? "Сегодня отмечено ✓"
-              : "Выполните 30 заданий, чтобы отметить сегодняшний день"}
+              : answeredToday > 0
+                ? `Сегодня: ${answeredToday} из ${DAILY_GOAL} заданий`
+                : `Выполните ${DAILY_GOAL} заданий, чтобы отметить сегодняшний день`}
           </p>
         </section>
 
