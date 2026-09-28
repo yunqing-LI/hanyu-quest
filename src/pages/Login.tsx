@@ -27,12 +27,15 @@ function friendlyError(message: string): string {
   if (/password should be at least/i.test(message)) {
     return "Пароль должен быть не короче 6 символов.";
   }
+  if (/security purposes|rate limit|too many requests/i.test(message)) {
+    return "Слишком частые запросы. Подождите минуту и попробуйте снова.";
+  }
   return "Что-то пошло не так. Попробуйте ещё раз.";
 }
 
 export default function Login() {
   const navigate = useNavigate();
-  const [mode, setMode] = useState<"login" | "register">("login");
+  const [mode, setMode] = useState<"login" | "register" | "reset">("login");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -41,10 +44,28 @@ export default function Login() {
   const [pending, setPending] = useState(false);
   /** 注册成功且需邮箱验证时显示的提示页 */
   const [registered, setRegistered] = useState(false);
+  /** 重置密码邮件已发出时显示的提示页 */
+  const [resetSent, setResetSent] = useState(false);
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
+
+    if (mode === "reset") {
+      setPending(true);
+      // 落地地址必须显式带上 base 子路径，理由同 signUp 的 emailRedirectTo；
+      // 该地址需加入 Supabase 后台 Redirect URLs 白名单
+      const { error: err } = await supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: window.location.origin + import.meta.env.BASE_URL,
+      });
+      setPending(false);
+      if (err) {
+        setError(friendlyError(err.message));
+        return;
+      }
+      setResetSent(true);
+      return;
+    }
 
     if (mode === "register") {
       // 班级邀请码校验：只挡路人，不是安全机制
@@ -122,6 +143,35 @@ export default function Login() {
     );
   }
 
+  if (resetSent) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center px-4 py-10">
+        <Card className="w-full max-w-sm shadow-md">
+          <CardHeader className="pb-4">
+            <h2 className="text-lg font-semibold">Проверьте почту</h2>
+            <CardDescription>
+              Если аккаунт с email {email} существует, мы отправили на него
+              письмо со ссылкой для сброса пароля. Перейдите по ссылке и
+              задайте новый пароль.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Button
+              variant="outline"
+              className="w-full"
+              onClick={() => {
+                setResetSent(false);
+                setMode("login");
+              }}
+            >
+              Ко входу
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 py-10">
       <div className="flex items-center gap-3 mb-8">
@@ -138,29 +188,45 @@ export default function Login() {
 
       <Card className="w-full max-w-sm shadow-md">
         <CardHeader className="pb-4">
-          <div className="grid grid-cols-2 gap-1 p-1 rounded-lg bg-secondary">
-            {(["login", "register"] as const).map((m) => (
-              <button
-                key={m}
-                type="button"
-                onClick={() => {
-                  setMode(m);
-                  setError(null);
-                }}
-                className={`py-1.5 rounded-md text-sm transition-colors ${
-                  mode === m
-                    ? "bg-card font-semibold shadow-sm"
-                    : "text-muted-foreground"
-                }`}
-              >
-                {m === "login" ? "Вход" : "Регистрация"}
-              </button>
-            ))}
-          </div>
+          {mode === "reset" ? (
+            <button
+              type="button"
+              onClick={() => {
+                setMode("login");
+                setError(null);
+              }}
+              className="self-start text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              ← Назад ко входу
+            </button>
+          ) : (
+            <div className="grid grid-cols-2 gap-1 p-1 rounded-lg bg-secondary">
+              {(["login", "register"] as const).map((m) => (
+                <button
+                  key={m}
+                  type="button"
+                  onClick={() => {
+                    setMode(m);
+                    setError(null);
+                  }}
+                  className={`py-1.5 rounded-md text-sm transition-colors ${
+                    mode === m
+                      ? "bg-card font-semibold shadow-sm"
+                      : "text-muted-foreground"
+                  }`}
+                >
+                  {m === "login" ? "Вход" : "Регистрация"}
+                </button>
+              ))}
+            </div>
+          )}
           <CardDescription className="pt-3">
-            {mode === "login"
-              ? "Войдите, чтобы продолжить ежедневную тренировку"
-              : "Создайте аккаунт: прогресс сохраняется в облаке"}
+            {mode === "login" &&
+              "Войдите, чтобы продолжить ежедневную тренировку"}
+            {mode === "register" &&
+              "Создайте аккаунт: прогресс сохраняется в облаке"}
+            {mode === "reset" &&
+              "Введите email аккаунта — отправим ссылку для сброса пароля"}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -189,19 +255,35 @@ export default function Login() {
                 autoComplete="email"
               />
             </div>
-            <div className="space-y-1.5">
-              <Label htmlFor="password">Пароль</Label>
-              <Input
-                id="password"
-                type="password"
-                required
-                minLength={6}
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Минимум 6 символов"
-                autoComplete={mode === "login" ? "current-password" : "new-password"}
-              />
-            </div>
+            {mode !== "reset" && (
+              <div className="space-y-1.5">
+                <div className="flex items-baseline justify-between">
+                  <Label htmlFor="password">Пароль</Label>
+                  {mode === "login" && (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setMode("reset");
+                        setError(null);
+                      }}
+                      className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      Забыли пароль?
+                    </button>
+                  )}
+                </div>
+                <Input
+                  id="password"
+                  type="password"
+                  required
+                  minLength={6}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Минимум 6 символов"
+                  autoComplete={mode === "login" ? "current-password" : "new-password"}
+                />
+              </div>
+            )}
             {mode === "register" && (
               <div className="space-y-1.5">
                 <Label htmlFor="invite">Код приглашения</Label>
@@ -225,7 +307,9 @@ export default function Login() {
                 ? "Подождите…"
                 : mode === "login"
                   ? "Войти"
-                  : "Зарегистрироваться"}
+                  : mode === "register"
+                    ? "Зарегистрироваться"
+                    : "Отправить ссылку"}
             </Button>
           </form>
         </CardContent>

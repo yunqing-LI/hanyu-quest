@@ -9,11 +9,15 @@ import App from './App.tsx'
 // 用户点确认链接后经 Supabase 验证，带着 #access_token=...&type=signup 跳回本站。
 // 必须在本站 Supabase client 异步消费 hash 之前记下标记，
 // App 据此把用户引到"验证成功"页（AuthConfirm 的 state.confirmed 模式）。
-if (
-  window.location.hash.includes('access_token=') &&
-  window.location.hash.includes('type=signup')
-) {
-  sessionStorage.setItem('hq-email-confirmed', '1')
+if (window.location.hash.includes('access_token=')) {
+  if (window.location.hash.includes('type=signup')) {
+    sessionStorage.setItem('hq-email-confirmed', '1')
+  }
+  // 重置密码邮件链接同样带 hash 跳回本站（type=recovery），
+  // 记下标记，App 据此把用户引到"设置新密码"页（ResetPassword）。
+  if (window.location.hash.includes('type=recovery')) {
+    sessionStorage.setItem('hq-pw-recovery', '1')
+  }
 }
 
 createRoot(document.getElementById('root')!).render(
